@@ -2,20 +2,27 @@ project:
   type: website
 
 website:
-  title: "website"
+  title: "Job Market Analysis 2024: Data Science & ML Trends"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - href: data_cleaning.ipynb
+        text: "Data Cleaning"
+      - href: eda.ipynb
+        text: "EDA"
+      - href: skill_gap_analysis.ipynb
+        text: "Skill Gap Analysis"
+      - href: ml_methods.ipynb
+        text: "ML Methods"
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: cosmo
     toc: true
 
-
+execute:
+  echo: true
+  eval: true
+  code-fold: true
 
