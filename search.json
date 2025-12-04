@@ -5,5 +5,12 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Job Market Analysis 2024: Data Science & ML Trends",
+    "section": "",
+    "text": "project: type: website\nwebsite: title: “Job Market Analysis 2024: Data Science & ML Trends” navbar: left: - href: index.qmd text: “Home” - href: data_cleaning.ipynb text: “Data Cleaning” - href: eda.ipynb text: “EDA” - href: skill_gap_analysis.ipynb text: “Skill Gap Analysis” - href: ml_methods.ipynb text: “ML Methods”\nformat: html: theme: cosmo toc: true\nexecute: echo: true eval: true code-fold: true"
   }
 ]
