@@ -1,7 +1,7 @@
 ---
 title: "Business Analytics, Data Science, and Machine Learning Trends"
 subtitle: "Evaluating Personal Job Market Prospects in 2024"
-author: "Your Name"
+author: "Mishal Aboobackar Manalody & Almas Tussipov"
 date: today
 format:
   html:
