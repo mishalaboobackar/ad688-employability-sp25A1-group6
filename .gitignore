@@ -1,3 +1,24 @@
-/.quarto/
-**/*.quarto_ipynb
+# Virtual environment
 .venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Quarto
+.quarto/
+_site/
+**/*.quarto_ipynb
+
+# Data (large files)
+data/
+
+# OS
+.DS_Store
+
+# Poetry lock (optional - some prefer to keep this)
+poetry.lock
