@@ -22,3 +22,4 @@ data/
 
 # Poetry lock (optional - some prefer to keep this)
 poetry.lock
+/.quarto/
