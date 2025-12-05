@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3a18c7dc0688905cb13a6fe3dd5f47c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,6 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Job Market Analysis 2024: Data Science &amp; ML Trends</span>
     </a>
@@ -1300,7 +1302,7 @@ Remaining rows: 56773</code></pre>
 </section>
 <section id="table-order" class="level2">
 <h2 class="anchored" data-anchor-id="table-order">6. Table Order</h2>
-<div id="a45d3bb7" class="cell" data-execution_count="13">
+<div id="a45d3bb7" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>column_order <span class="op">=</span> [</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TITLE_NAME'</span>, <span class="st">'COMPANY_NAME'</span>, <span class="st">'POSTED'</span>, <span class="st">'DURATION'</span>,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>,</span>
@@ -1315,9 +1317,9 @@ Remaining rows: 56773</code></pre>
 </section>
 <section id="cleaned-dataset-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cleaned-dataset-summary">7. Cleaned Dataset summary</h2>
-<div id="4b3bf4b5" class="cell" data-execution_count="14">
+<div id="4b3bf4b5" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>TITLE_NAME                0
 COMPANY_NAME              0
 POSTED                    0
@@ -1340,9 +1342,117 @@ NAICS_2022_2_NAME         0
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="8ff4b068" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>display(df.head())</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'data/lightcast_cleaned.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="25cdf769" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">POSTED</th>
+<th data-quarto-table-cell-role="th">DURATION</th>
+<th data-quarto-table-cell-role="th">SALARY</th>
+<th data-quarto-table-cell-role="th">SALARY_FROM</th>
+<th data-quarto-table-cell-role="th">SALARY_TO</th>
+<th data-quarto-table-cell-role="th">MIN_YEARS_EXPERIENCE</th>
+<th data-quarto-table-cell-role="th">EXPERIENCE_SPECIFIED</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">count</th>
+<td>56773</td>
+<td>56773.000000</td>
+<td>56773.000000</td>
+<td>56773.000000</td>
+<td>56773.000000</td>
+<td>56773.000000</td>
+<td>56773.000000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">mean</th>
+<td>2024-07-10 09:06:03.912423168</td>
+<td>35.069329</td>
+<td>111014.995050</td>
+<td>87708.293872</td>
+<td>128664.903229</td>
+<td>3.407623</td>
+<td>0.671270</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">min</th>
+<td>2024-05-01 00:00:00</td>
+<td>0.000000</td>
+<td>15860.000000</td>
+<td>10230.000000</td>
+<td>11148.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">25%</th>
+<td>2024-06-03 00:00:00</td>
+<td>14.000000</td>
+<td>95300.000000</td>
+<td>75600.000000</td>
+<td>107225.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">50%</th>
+<td>2024-07-09 00:00:00</td>
+<td>30.000000</td>
+<td>105000.000000</td>
+<td>81770.000000</td>
+<td>120750.000000</td>
+<td>3.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">75%</th>
+<td>2024-08-16 00:00:00</td>
+<td>60.000000</td>
+<td>125900.000000</td>
+<td>97875.000000</td>
+<td>150000.000000</td>
+<td>5.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">max</th>
+<td>2024-09-30 00:00:00</td>
+<td>119.000000</td>
+<td>500000.000000</td>
+<td>800000.000000</td>
+<td>950000.000000</td>
+<td>15.000000</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">std</th>
+<td>NaN</td>
+<td>23.855804</td>
+<td>29957.364868</td>
+<td>26816.028140</td>
+<td>42261.703578</td>
+<td>3.491146</td>
+<td>0.469756</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="8ff4b068" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>display(df.head())</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>df.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'data/lightcast_cleaned.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 
