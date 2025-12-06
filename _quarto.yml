@@ -21,10 +21,10 @@ format:
     theme: cosmo
     toc: true
     code-fold: true
-    embed-resources: true
+    include-in-header:
+      text: |
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 execute:
   echo: true
   eval: true
-  code-fold: true
-
