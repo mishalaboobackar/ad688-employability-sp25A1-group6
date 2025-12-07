@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/data_cleaning.html</loc>
-    <lastmod>2025-12-06T02:35:02.286Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/index.html</loc>
-    <lastmod>2025-12-06T02:35:02.319Z</lastmod>
+    <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/ml_methods.html</loc>
+    <lastmod>2025-12-07T05:44:22.925Z</lastmod>
   </url>
   <url>
     <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/eda.html</loc>
-    <lastmod>2025-12-06T02:35:02.315Z</lastmod>
+    <lastmod>2025-12-07T05:44:22.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/index.html</loc>
+    <lastmod>2025-12-07T05:44:22.924Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mishalaboobackar.github.io/ad688-employability-sp25A1-group6/data_cleaning.html</loc>
+    <lastmod>2025-12-07T05:44:22.891Z</lastmod>
   </url>
 </urlset>

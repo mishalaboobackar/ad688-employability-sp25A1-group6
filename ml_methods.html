@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Machine Learning Methods – Job Market Analysis 2024: Data Science &amp; ML Trends</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Job Market Analysis 2024: Data Science &amp; ML Trends</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_cleaning.html"> 
+<span class="menu-text">Data Cleaning</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html"> 
+<span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./skill_gap_analysis.ipynb"> 
+<span class="menu-text">Skill Gap Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./ml_methods.html" aria-current="page"> 
+<span class="menu-text">ML Methods</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#loading-the-dataset-and-initial-inspection" id="toc-loading-the-dataset-and-initial-inspection" class="nav-link active" data-scroll-target="#loading-the-dataset-and-initial-inspection">Loading the Dataset and Initial Inspection</a></li>
+  <li><a href="#step-5-encode-categorical-features-for-ml-models" id="toc-step-5-encode-categorical-features-for-ml-models" class="nav-link" data-scroll-target="#step-5-encode-categorical-features-for-ml-models">Step 5 — Encode Categorical Features for ML Models</a>
+  <ul class="collapse">
+  <li><a href="#step-5b-encode-status-remote-hybrid-on-site" id="toc-step-5b-encode-status-remote-hybrid-on-site" class="nav-link" data-scroll-target="#step-5b-encode-status-remote-hybrid-on-site">STEP 5B – Encode status (remote / hybrid / on-site)</a></li>
+  <li><a href="#step-5c-encode-industry" id="toc-step-5c-encode-industry" class="nav-link" data-scroll-target="#step-5c-encode-industry">STEP 5C — Encode Industry</a></li>
+  <li><a href="#step-6-build-feature-matrix-x-for-clustering-and-regression" id="toc-step-6-build-feature-matrix-x-for-clustering-and-regression" class="nav-link" data-scroll-target="#step-6-build-feature-matrix-x-for-clustering-and-regression">Step 6 – Build feature matrix X for clustering and regression</a></li>
+  <li><a href="#step-7-unsupervised-learning-k-means-clustering" id="toc-step-7-unsupervised-learning-k-means-clustering" class="nav-link" data-scroll-target="#step-7-unsupervised-learning-k-means-clustering">Step 7 – Unsupervised Learning: K-Means Clustering</a></li>
+  <li><a href="#supervised-regression-modeling-for-salary-prediction" id="toc-supervised-regression-modeling-for-salary-prediction" class="nav-link" data-scroll-target="#supervised-regression-modeling-for-salary-prediction">Supervised Regression Modeling for Salary Prediction</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Machine Learning Methods</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This section applies supervised ML models to the employability dataset.<br>
+We evaluate baseline, linear, and ensemble methods, and compare performance.</p>
+<section id="loading-the-dataset-and-initial-inspection" class="level2">
+<h2 class="anchored" data-anchor-id="loading-the-dataset-and-initial-inspection">Loading the Dataset and Initial Inspection</h2>
+<div id="9f3a28b4" class="cell" data-execution_count="53">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder, StandardScaler</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> (</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    accuracy_score,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    classification_report,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    confusion_matrix,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    precision_score,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    recall_score,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    f1_score,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    mean_squared_error,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    r2_score,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.dummy <span class="im">import</span> DummyClassifier, DummyRegressor</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression, LinearRegression</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier, RandomForestRegressor</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="10cede9d" class="cell" data-execution_count="54">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1 — Load Dataset and Initial Inspection</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/data_science_job_posts_2025.csv"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<pre><code>Index(['job_title', 'seniority_level', 'status', 'company', 'location',
+       'post_date', 'headquarter', 'industry', 'ownership', 'company_size',
+       'revenue', 'salary', 'skills'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div id="f782d5bd" class="cell" data-execution_count="55">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.info()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df.isna().mean().sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 944 entries, 0 to 943
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype 
+---  ------           --------------  ----- 
+ 0   job_title        941 non-null    object
+ 1   seniority_level  884 non-null    object
+ 2   status           688 non-null    object
+ 3   company          944 non-null    object
+ 4   location         942 non-null    object
+ 5   post_date        944 non-null    object
+ 6   headquarter      944 non-null    object
+ 7   industry         944 non-null    object
+ 8   ownership        897 non-null    object
+ 9   company_size     944 non-null    object
+ 10  revenue          929 non-null    object
+ 11  salary           944 non-null    object
+ 12  skills           944 non-null    object
+dtypes: object(13)
+memory usage: 96.0+ KB</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="55">
+<pre><code>status             0.271186
+seniority_level    0.063559
+ownership          0.049788
+revenue            0.015890
+job_title          0.003178
+location           0.002119
+company            0.000000
+headquarter        0.000000
+post_date          0.000000
+industry           0.000000
+company_size       0.000000
+salary             0.000000
+skills             0.000000
+dtype: float64</code></pre>
+</div>
+</div>
+<div id="285c377f" class="cell" data-execution_count="56">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="56">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">job_title</th>
+<th data-quarto-table-cell-role="th">seniority_level</th>
+<th data-quarto-table-cell-role="th">status</th>
+<th data-quarto-table-cell-role="th">company</th>
+<th data-quarto-table-cell-role="th">location</th>
+<th data-quarto-table-cell-role="th">post_date</th>
+<th data-quarto-table-cell-role="th">headquarter</th>
+<th data-quarto-table-cell-role="th">industry</th>
+<th data-quarto-table-cell-role="th">ownership</th>
+<th data-quarto-table-cell-role="th">company_size</th>
+<th data-quarto-table-cell-role="th">revenue</th>
+<th data-quarto-table-cell-role="th">salary</th>
+<th data-quarto-table-cell-role="th">skills</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>data scientist</td>
+<td>senior</td>
+<td>hybrid</td>
+<td>company_003</td>
+<td>Grapevine, TX . Hybrid</td>
+<td>17 days ago</td>
+<td>Bentonville, AR, US</td>
+<td>Retail</td>
+<td>Public</td>
+<td>€352.44B</td>
+<td>Public</td>
+<td>€100,472 - €200,938</td>
+<td>['spark', 'r', 'python', 'scala', 'machine lea...</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>data scientist</td>
+<td>lead</td>
+<td>hybrid</td>
+<td>company_005</td>
+<td>Fort Worth, TX . Hybrid</td>
+<td>15 days ago</td>
+<td>Detroit, MI, US</td>
+<td>Manufacturing</td>
+<td>Public</td>
+<td>155,030</td>
+<td>€51.10B</td>
+<td>€118,733</td>
+<td>['spark', 'r', 'python', 'sql', 'machine learn...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>data scientist</td>
+<td>senior</td>
+<td>on-site</td>
+<td>company_007</td>
+<td>Austin, TX . Toronto, Ontario, Canada . Kirkla...</td>
+<td>a month ago</td>
+<td>Redwood City, CA, US</td>
+<td>Technology</td>
+<td>Public</td>
+<td>25,930</td>
+<td>€33.80B</td>
+<td>€94,987 - €159,559</td>
+<td>['aws', 'git', 'python', 'docker', 'sql', 'mac...</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>data scientist</td>
+<td>senior</td>
+<td>hybrid</td>
+<td>company_008</td>
+<td>Chicago, IL . Scottsdale, AZ . Austin, TX . Hy...</td>
+<td>8 days ago</td>
+<td>San Jose, CA, US</td>
+<td>Technology</td>
+<td>Public</td>
+<td>34,690</td>
+<td>€81.71B</td>
+<td>€112,797 - €194,402</td>
+<td>['sql', 'r', 'python']</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>data scientist</td>
+<td>NaN</td>
+<td>on-site</td>
+<td>company_009</td>
+<td>On-site</td>
+<td>3 days ago</td>
+<td>Stamford, CT, US</td>
+<td>Finance</td>
+<td>Private</td>
+<td>1,800</td>
+<td>Private</td>
+<td>€114,172 - €228,337</td>
+<td>[]</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>data scientist</td>
+<td>lead</td>
+<td>NaN</td>
+<td>company_013</td>
+<td>New York, NY</td>
+<td>3 months ago</td>
+<td>New York, NY, US</td>
+<td>Technology</td>
+<td>Private</td>
+<td>150</td>
+<td>€2.16B</td>
+<td>€196,371 - €251,170</td>
+<td>['scikit-learn', 'python', 'scala', 'sql', 'ma...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>data scientist</td>
+<td>junior</td>
+<td>NaN</td>
+<td>company_014</td>
+<td>Berkeley, CA</td>
+<td>15 days ago</td>
+<td>Berkeley, CA, US</td>
+<td>Education</td>
+<td>NaN</td>
+<td>17,471</td>
+<td>Education</td>
+<td>€51,330 - €70,144</td>
+<td>[]</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>machine learning engineer</td>
+<td>senior</td>
+<td>on-site</td>
+<td>company_015</td>
+<td>Menlo Park, CA</td>
+<td>9 days ago</td>
+<td>Menlo Park, CA, US</td>
+<td>Technology</td>
+<td>Public</td>
+<td>900</td>
+<td>Public</td>
+<td>€121,480 - €132,440</td>
+<td>['machine learning']</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>data scientist</td>
+<td>senior</td>
+<td>remote</td>
+<td>company_019</td>
+<td>Fully Remote</td>
+<td>6 days ago</td>
+<td>Boston, MA, US</td>
+<td>Technology</td>
+<td>Private</td>
+<td>126</td>
+<td>Private</td>
+<td>€207,331</td>
+<td>[]</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>data scientist</td>
+<td>senior</td>
+<td>on-site</td>
+<td>company_021</td>
+<td>On-site</td>
+<td>a day ago</td>
+<td>San Francisco, CA, US</td>
+<td>Technology</td>
+<td>Public</td>
+<td>5,520</td>
+<td>€61.06B</td>
+<td>€219,201</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="597d07bc" class="cell" data-execution_count="57">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2 – Create binary skill features (python, sql, spark, etc.)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>skill_keywords <span class="op">=</span> [</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python"</span>, <span class="st">"sql"</span>, <span class="st">"spark"</span>, <span class="st">"r"</span>, <span class="st">"scala"</span>, <span class="st">"docker"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tableau"</span>, <span class="st">"powerbi"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tensorflow"</span>, <span class="st">"pytorch"</span>, <span class="st">"machine learning"</span>, <span class="st">"deep learning"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"aws"</span>, <span class="st">"azure"</span>, <span class="st">"gcp"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> kw <span class="kw">in</span> skill_keywords:</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    col <span class="op">=</span> <span class="st">"skill_"</span> <span class="op">+</span> kw.lower().replace(<span class="st">" "</span>, <span class="st">"_"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[<span class="st">"skills"</span>].<span class="bu">str</span>.contains(kw, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="77f0408d" class="cell" data-execution_count="58">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how many postings mention each skill</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df.<span class="bu">filter</span>(like<span class="op">=</span><span class="st">"skill_"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="58">
+<pre><code>skill_python              640
+skill_sql                 442
+skill_spark               161
+skill_r                   694
+skill_scala                85
+skill_docker               54
+skill_tableau             116
+skill_powerbi              25
+skill_tensorflow          165
+skill_pytorch             148
+skill_machine_learning    580
+skill_deep_learning       178
+skill_aws                 218
+skill_azure               155
+skill_gcp                 106
+dtype: int64</code></pre>
+</div>
+</div>
+<div id="b571df79" class="cell" data-execution_count="59">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3 — Create Binary Target: Is This an ML Role?</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>ml_keywords <span class="op">=</span> [</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"machine learning"</span>, <span class="st">"deep learning"</span>, <span class="st">"neural network"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tensorflow"</span>, <span class="st">"pytorch"</span>, <span class="st">"ai"</span>, <span class="st">"ml"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> <span class="st">"|"</span>.join(ml_keywords)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"is_ml_role"</span>] <span class="op">=</span> df[<span class="st">"skills"</span>].<span class="bu">str</span>.contains(pattern, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"is_ml_role"</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="59">
+<pre><code>is_ml_role
+1    603
+0    341
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div id="126a9a53" class="cell" data-execution_count="60">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4 – Clean salary column</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_salary_range(s):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(s):</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="va">None</span>, <span class="va">None</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove € and commas</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> s.replace(<span class="st">"€"</span>, <span class="st">""</span>).replace(<span class="st">","</span>, <span class="st">""</span>).strip()</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Match patterns like "100000 – 200000"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    match <span class="op">=</span> re.findall(<span class="vs">r"</span><span class="kw">(</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="vs">"</span>, s)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(match) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        low, high <span class="op">=</span> <span class="bu">map</span>(<span class="bu">int</span>, match)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> low, high</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="va">None</span>, <span class="va">None</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply to dataset</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"salary_min"</span>], df[<span class="st">"salary_max"</span>] <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>df[<span class="st">"salary"</span>].<span class="bu">apply</span>(parse_salary_range))</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Average salary</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"salary_avg"</span>] <span class="op">=</span> df[[<span class="st">"salary_min"</span>, <span class="st">"salary_max"</span>]].mean(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"salary_min"</span>, <span class="st">"salary_max"</span>, <span class="st">"salary_avg"</span>]].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="60">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">salary_min</th>
+<th data-quarto-table-cell-role="th">salary_max</th>
+<th data-quarto-table-cell-role="th">salary_avg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>100472.0</td>
+<td>200938.0</td>
+<td>150705.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>94987.0</td>
+<td>159559.0</td>
+<td>127273.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>112797.0</td>
+<td>194402.0</td>
+<td>153599.5</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>114172.0</td>
+<td>228337.0</td>
+<td>171254.5</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="ac6bcbcb" class="cell" data-execution_count="61">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check missing salary values</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"salary_min"</span>, <span class="st">"salary_max"</span>, <span class="st">"salary_avg"</span>]].isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="61">
+<pre><code>salary_min    350
+salary_max    350
+salary_avg    350
+dtype: int64</code></pre>
+</div>
+</div>
+<p>The dataset contained missing values across several fields such as seniority_level, status, salary, revenue, and ownership. Missing salary values were particularly common because many job postings did not disclose salary ranges. After transforming the salary column into numeric values (min, max, avg), these missing entries became explicit as NaN</p>
+<div id="8d95b35e" class="cell" data-execution_count="62">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"seniority_level"</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"status"</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"industry"</span>].value_counts().head(<span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<pre><code>industry
+Technology       582
+Finance          127
+Retail           110
+Healthcare        83
+Education         19
+Energy            12
+Manufacturing      7
+Logistics          4
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="step-5-encode-categorical-features-for-ml-models" class="level1">
+<h1>Step 5 — Encode Categorical Features for ML Models</h1>
+<div id="fa3466ee" class="cell" data-execution_count="63">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"seniority_level"</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>seniority_level
+senior      630
+lead        116
+midlevel    113
+NaN          60
+junior       25
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div id="73bd71f6" class="cell" data-execution_count="64">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5A – Encode seniority_level</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing with "unknown"</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"seniority_level"</span>] <span class="op">=</span> df[<span class="st">"seniority_level"</span>].fillna(<span class="st">"unknown"</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure lowercase</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"seniority_level"</span>] <span class="op">=</span> df[<span class="st">"seniority_level"</span>].<span class="bu">str</span>.lower()</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encode</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>seniority_dummies <span class="op">=</span> pd.get_dummies(df[<span class="st">"seniority_level"</span>], prefix<span class="op">=</span><span class="st">"seniority"</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to dataframe</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.concat([df, seniority_dummies], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>df[seniority_dummies.columns].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="64">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">seniority_junior</th>
+<th data-quarto-table-cell-role="th">seniority_lead</th>
+<th data-quarto-table-cell-role="th">seniority_midlevel</th>
+<th data-quarto-table-cell-role="th">seniority_senior</th>
+<th data-quarto-table-cell-role="th">seniority_unknown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="step-5b-encode-status-remote-hybrid-on-site" class="level2">
+<h2 class="anchored" data-anchor-id="step-5b-encode-status-remote-hybrid-on-site">STEP 5B – Encode status (remote / hybrid / on-site)</h2>
+<div id="610f5825" class="cell" data-execution_count="65">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"status"</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="65">
+<pre><code>status
+on-site    363
+NaN        256
+hybrid     207
+remote     118
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div id="e8800fb3" class="cell" data-execution_count="66">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace missing with "unknown"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"status"</span>] <span class="op">=</span> df[<span class="st">"status"</span>].fillna(<span class="st">"unknown"</span>).<span class="bu">str</span>.lower()</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>status_dummies <span class="op">=</span> pd.get_dummies(df[<span class="st">"status"</span>], prefix<span class="op">=</span><span class="st">"status"</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.concat([df, status_dummies], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>df[status_dummies.columns].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">status_hybrid</th>
+<th data-quarto-table-cell-role="th">status_on-site</th>
+<th data-quarto-table-cell-role="th">status_remote</th>
+<th data-quarto-table-cell-role="th">status_unknown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="e3656291" class="cell" data-execution_count="67">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df[status_dummies.columns].<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="67">
+<pre><code>status_hybrid     207
+status_on-site    363
+status_remote     118
+status_unknown    256
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="step-5c-encode-industry" class="level2">
+<h2 class="anchored" data-anchor-id="step-5c-encode-industry">STEP 5C — Encode Industry</h2>
+<div id="6f4fcf2f" class="cell" data-execution_count="68">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5C – One-hot encode industry</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"industry"</span>] <span class="op">=</span> df[<span class="st">"industry"</span>].<span class="bu">str</span>.lower()</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>industry_dummies <span class="op">=</span> pd.get_dummies(df[<span class="st">"industry"</span>], prefix<span class="op">=</span><span class="st">"industry"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.concat([df, industry_dummies], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>df[industry_dummies.columns].head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="68">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">industry_education</th>
+<th data-quarto-table-cell-role="th">industry_energy</th>
+<th data-quarto-table-cell-role="th">industry_finance</th>
+<th data-quarto-table-cell-role="th">industry_healthcare</th>
+<th data-quarto-table-cell-role="th">industry_logistics</th>
+<th data-quarto-table-cell-role="th">industry_manufacturing</th>
+<th data-quarto-table-cell-role="th">industry_retail</th>
+<th data-quarto-table-cell-role="th">industry_technology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="0d41da8e" class="cell" data-execution_count="69">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>industry_dummies.<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<pre><code>industry_education         19
+industry_energy            12
+industry_finance          127
+industry_healthcare        83
+industry_logistics          4
+industry_manufacturing      7
+industry_retail           110
+industry_technology       582
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="step-6-build-feature-matrix-x-for-clustering-and-regression" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-build-feature-matrix-x-for-clustering-and-regression">Step 6 – Build feature matrix X for clustering and regression</h2>
+<div id="75fa0d4c" class="cell" data-execution_count="70">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Step 6 – Build feature matrix X for clustering and regression</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Skill features</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>skill_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> df.columns <span class="cf">if</span> c.startswith(<span class="st">"skill_"</span>)]</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Seniority dummies</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>seniority_cols <span class="op">=</span> [</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>    c <span class="cf">for</span> c <span class="kw">in</span> df.columns</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c.startswith(<span class="st">"seniority_"</span>) <span class="kw">and</span> c <span class="op">!=</span> <span class="st">"seniority_level"</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Status dummies</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>status_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> df.columns <span class="cf">if</span> c.startswith(<span class="st">"status_"</span>)]</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Industry dummies</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>industry_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> df.columns <span class="cf">if</span> c.startswith(<span class="st">"industry_"</span>)]</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine all features</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>feature_cols <span class="op">=</span> skill_cols <span class="op">+</span> seniority_cols <span class="op">+</span> status_cols <span class="op">+</span> industry_cols</span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[feature_cols]</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>X.dtypes.head(), X.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="70">
+<pre><code>(skill_python    int64
+ skill_sql       int64
+ skill_spark     int64
+ skill_r         int64
+ skill_scala     int64
+ dtype: object,
+ (944, 32))</code></pre>
+</div>
+</div>
+</section>
+<section id="step-7-unsupervised-learning-k-means-clustering" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-unsupervised-learning-k-means-clustering">Step 7 – Unsupervised Learning: K-Means Clustering</h2>
+<div id="a79ae1d6" class="cell" data-execution_count="71">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>X_scaled.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="71">
+<pre><code>(944, 32)</code></pre>
+</div>
+</div>
+<div id="0b7dc3bc" class="cell" data-execution_count="72">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Elbow plot to determine optimal k</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>inertias <span class="op">=</span> []</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">11</span>)</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> K:</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    km.fit(X_scaled)</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    inertias.append(km.inertia_)</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>plt.plot(K, inertias, marker<span class="op">=</span><span class="st">"o"</span>)</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of clusters k"</span>)</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inertia"</span>)</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Elbow Plot for K-Means"</span>)</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ml_methods_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We selected k = 5 because the reduction in inertia begins to slow after five clusters. While the elbow is not very sharp, k = 5 marks the point where additional clusters provide smaller incremental improvements, making it a reasonable balance between simplicity and segmentation quality.</p>
+<div id="f5dd5ea6" class="cell" data-execution_count="73">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit K-means with chosen k</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"cluster"</span>] <span class="op">=</span> kmeans.fit_predict(X_scaled)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"cluster"</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<pre><code>cluster
+2    229
+1    218
+4    218
+0    166
+3    113
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Although the inertia curve suggested both 4 and 5 as reasonable options, the 5-cluster solution produced a very small cluster (7 observations), which limits interpretability. Therefore, we selected k = 4, ensuring all clusters are large, stable, and meaningful for analysis.</p>
+<div id="1dd979cf" class="cell" data-execution_count="74">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit K-means with  chosen k=4</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"cluster"</span>] <span class="op">=</span> kmeans.fit_predict(X_scaled)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"cluster"</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="74">
+<pre><code>cluster
+1    309
+2    236
+3    228
+0    171
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div id="1218c1b5" class="cell" data-execution_count="75">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Inspect Cluster Centers (Interpretation)</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>cluster_centers <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    kmeans.cluster_centers_,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>X.columns</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>cluster_centers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="75">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">skill_python</th>
+<th data-quarto-table-cell-role="th">skill_sql</th>
+<th data-quarto-table-cell-role="th">skill_spark</th>
+<th data-quarto-table-cell-role="th">skill_r</th>
+<th data-quarto-table-cell-role="th">skill_scala</th>
+<th data-quarto-table-cell-role="th">skill_docker</th>
+<th data-quarto-table-cell-role="th">skill_tableau</th>
+<th data-quarto-table-cell-role="th">skill_powerbi</th>
+<th data-quarto-table-cell-role="th">skill_tensorflow</th>
+<th data-quarto-table-cell-role="th">skill_pytorch</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">status_remote</th>
+<th data-quarto-table-cell-role="th">status_unknown</th>
+<th data-quarto-table-cell-role="th">industry_education</th>
+<th data-quarto-table-cell-role="th">industry_energy</th>
+<th data-quarto-table-cell-role="th">industry_finance</th>
+<th data-quarto-table-cell-role="th">industry_healthcare</th>
+<th data-quarto-table-cell-role="th">industry_logistics</th>
+<th data-quarto-table-cell-role="th">industry_manufacturing</th>
+<th data-quarto-table-cell-role="th">industry_retail</th>
+<th data-quarto-table-cell-role="th">industry_technology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>0.463923</td>
+<td>-0.094527</td>
+<td>0.479443</td>
+<td>0.600192</td>
+<td>0.298335</td>
+<td>0.760944</td>
+<td>-0.124916</td>
+<td>-0.019252</td>
+<td>1.772486</td>
+<td>1.836619</td>
+<td>...</td>
+<td>-0.130409</td>
+<td>0.139790</td>
+<td>-0.101678</td>
+<td>-0.009069</td>
+<td>0.051324</td>
+<td>-0.021373</td>
+<td>2.048539e-01</td>
+<td>-0.086433</td>
+<td>0.001352</td>
+<td>-0.005122</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>0.495273</td>
+<td>0.501466</td>
+<td>0.166063</td>
+<td>0.578189</td>
+<td>0.284649</td>
+<td>-0.162708</td>
+<td>0.158013</td>
+<td>0.117237</td>
+<td>-0.323888</td>
+<td>-0.395593</td>
+<td>...</td>
+<td>-0.094185</td>
+<td>-0.544479</td>
+<td>-0.051142</td>
+<td>-0.084583</td>
+<td>0.032522</td>
+<td>-0.001925</td>
+<td>-6.523281e-02</td>
+<td>0.064455</td>
+<td>0.433649</td>
+<td>-0.276256</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>-1.287720</td>
+<td>-0.827945</td>
+<td>-0.453453</td>
+<td>-1.598912</td>
+<td>-0.314567</td>
+<td>-0.246321</td>
+<td>-0.296855</td>
+<td>-0.164935</td>
+<td>-0.460228</td>
+<td>-0.431196</td>
+<td>...</td>
+<td>0.339527</td>
+<td>-0.428902</td>
+<td>-0.082975</td>
+<td>0.037823</td>
+<td>-0.071403</td>
+<td>-0.071074</td>
+<td>9.067605e-17</td>
+<td>0.012348</td>
+<td>-0.257523</td>
+<td>0.274508</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>0.313737</td>
+<td>0.248272</td>
+<td>-0.115278</td>
+<td>0.421272</td>
+<td>-0.283922</td>
+<td>-0.095231</td>
+<td>0.186808</td>
+<td>0.026274</td>
+<td>-0.414034</td>
+<td>-0.395007</td>
+<td>...</td>
+<td>-0.125988</td>
+<td>1.077021</td>
+<td>0.231455</td>
+<td>0.082283</td>
+<td>-0.008660</td>
+<td>0.092206</td>
+<td>-6.523281e-02</td>
+<td>-0.035310</td>
+<td>-0.322164</td>
+<td>0.094102</td>
+</tr>
+</tbody>
+</table>
+
+<p>4 rows × 32 columns</p>
+</div>
+</div>
+</div>
+<div id="0f84de5b" class="cell" data-execution_count="76">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lets make a table </span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>cluster_centers <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    kmeans.cluster_centers_,</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>X.columns,</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>[<span class="ss">f"cluster_</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k)]</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>cluster_centers.style.background_gradient(</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"coolwarm"</span>  <span class="co"># red = high, blue = low</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="76">
+<style type="text/css">
+#T_930fd_row0_col0 {
+  background-color: #ba162b;
+  color: #f1f1f1;
+}
+#T_930fd_row0_col1 {
+  background-color: #ead5c9;
+  color: #000000;
+}
+#T_930fd_row0_col2, #T_930fd_row0_col3, #T_930fd_row0_col4, #T_930fd_row0_col5, #T_930fd_row0_col8, #T_930fd_row0_col9, #T_930fd_row0_col10, #T_930fd_row0_col11, #T_930fd_row0_col12, #T_930fd_row0_col13, #T_930fd_row0_col14, #T_930fd_row0_col26, #T_930fd_row0_col28, #T_930fd_row1_col0, #T_930fd_row1_col1, #T_930fd_row1_col7, #T_930fd_row1_col16, #T_930fd_row1_col18, #T_930fd_row1_col21, #T_930fd_row1_col29, #T_930fd_row1_col30, #T_930fd_row2_col19, #T_930fd_row2_col20, #T_930fd_row2_col22, #T_930fd_row2_col31, #T_930fd_row3_col6, #T_930fd_row3_col15, #T_930fd_row3_col17, #T_930fd_row3_col23, #T_930fd_row3_col24, #T_930fd_row3_col25, #T_930fd_row3_col27 {
+  background-color: #b40426;
+  color: #f1f1f1;
+}
+#T_930fd_row0_col6 {
+  background-color: #b2ccfb;
+  color: #000000;
+}
+#T_930fd_row0_col7 {
+  background-color: #e1dad6;
+  color: #000000;
+}
+#T_930fd_row0_col15 {
+  background-color: #f5c4ac;
+  color: #000000;
+}
+#T_930fd_row0_col16 {
+  background-color: #f6bfa6;
+  color: #000000;
+}
+#T_930fd_row0_col17, #T_930fd_row2_col24 {
+  background-color: #4b64d5;
+  color: #f1f1f1;
+}
+#T_930fd_row0_col18 {
+  background-color: #cc403a;
+  color: #f1f1f1;
+}
+#T_930fd_row0_col19, #T_930fd_row0_col22, #T_930fd_row0_col24, #T_930fd_row0_col29, #T_930fd_row1_col15, #T_930fd_row1_col19, #T_930fd_row1_col23, #T_930fd_row1_col25, #T_930fd_row1_col28, #T_930fd_row1_col31, #T_930fd_row2_col0, #T_930fd_row2_col1, #T_930fd_row2_col2, #T_930fd_row2_col3, #T_930fd_row2_col4, #T_930fd_row2_col5, #T_930fd_row2_col6, #T_930fd_row2_col7, #T_930fd_row2_col8, #T_930fd_row2_col9, #T_930fd_row2_col10, #T_930fd_row2_col11, #T_930fd_row2_col12, #T_930fd_row2_col13, #T_930fd_row2_col14, #T_930fd_row2_col17, #T_930fd_row2_col26, #T_930fd_row2_col27, #T_930fd_row3_col16, #T_930fd_row3_col18, #T_930fd_row3_col19, #T_930fd_row3_col20, #T_930fd_row3_col21, #T_930fd_row3_col28, #T_930fd_row3_col30 {
+  background-color: #3b4cc0;
+  color: #f1f1f1;
+}
+#T_930fd_row0_col20, #T_930fd_row3_col31 {
+  background-color: #f7b599;
+  color: #000000;
+}
+#T_930fd_row0_col21 {
+  background-color: #bfd3f6;
+  color: #000000;
+}
+#T_930fd_row0_col23, #T_930fd_row1_col27 {
+  background-color: #c7d7f0;
+  color: #000000;
+}
+#T_930fd_row0_col25 {
+  background-color: #cfdaea;
+  color: #000000;
+}
+#T_930fd_row0_col27 {
+  background-color: #9fbfff;
+  color: #000000;
+}
+#T_930fd_row0_col30 {
+  background-color: #c9d7f0;
+  color: #000000;
+}
+#T_930fd_row0_col31 {
+  background-color: #dbdcde;
+  color: #000000;
+}
+#T_930fd_row1_col2 {
+  background-color: #f7b89c;
+  color: #000000;
+}
+#T_930fd_row1_col3 {
+  background-color: #b70d28;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col4 {
+  background-color: #bb1b2c;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col5, #T_930fd_row2_col30 {
+  background-color: #5470de;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col6 {
+  background-color: #ca3b37;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col8 {
+  background-color: #4c66d6;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col9, #T_930fd_row3_col9 {
+  background-color: #3f53c6;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col10 {
+  background-color: #d95847;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col11 {
+  background-color: #86a9fc;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col12 {
+  background-color: #d2dbe8;
+  color: #000000;
+}
+#T_930fd_row1_col13 {
+  background-color: #a2c1ff;
+  color: #000000;
+}
+#T_930fd_row1_col14 {
+  background-color: #7093f3;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col17 {
+  background-color: #445acc;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col20 {
+  background-color: #e3d9d3;
+  color: #000000;
+}
+#T_930fd_row1_col22 {
+  background-color: #516ddb;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col24, #T_930fd_row3_col5 {
+  background-color: #6a8bef;
+  color: #f1f1f1;
+}
+#T_930fd_row1_col26 {
+  background-color: #e46e56;
+  color: #f1f1f1;
+}
+#T_930fd_row2_col15 {
+  background-color: #455cce;
+  color: #f1f1f1;
+}
+#T_930fd_row2_col16 {
+  background-color: #bed2f6;
+  color: #000000;
+}
+#T_930fd_row2_col18 {
+  background-color: #a7c5fe;
+  color: #000000;
+}
+#T_930fd_row2_col21 {
+  background-color: #c1d4f4;
+  color: #000000;
+}
+#T_930fd_row2_col23 {
+  background-color: #506bda;
+  color: #f1f1f1;
+}
+#T_930fd_row2_col25 {
+  background-color: #f5a081;
+  color: #000000;
+}
+#T_930fd_row2_col28 {
+  background-color: #89acfd;
+  color: #000000;
+}
+#T_930fd_row2_col29 {
+  background-color: #f7bca1;
+  color: #000000;
+}
+#T_930fd_row3_col0 {
+  background-color: #d75445;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col1 {
+  background-color: #ec7f63;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col2 {
+  background-color: #b3cdfb;
+  color: #000000;
+}
+#T_930fd_row3_col3 {
+  background-color: #d0473d;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col4 {
+  background-color: #4961d2;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col7 {
+  background-color: #f7b497;
+  color: #000000;
+}
+#T_930fd_row3_col8 {
+  background-color: #4055c8;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col10 {
+  background-color: #ee8669;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col11 {
+  background-color: #6c8ff1;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col12 {
+  background-color: #aec9fc;
+  color: #000000;
+}
+#T_930fd_row3_col13 {
+  background-color: #a3c2fe;
+  color: #000000;
+}
+#T_930fd_row3_col14 {
+  background-color: #88abfd;
+  color: #000000;
+}
+#T_930fd_row3_col22 {
+  background-color: #3d50c3;
+  color: #f1f1f1;
+}
+#T_930fd_row3_col26 {
+  background-color: #dfdbd9;
+  color: #000000;
+}
+#T_930fd_row3_col29 {
+  background-color: #abc8fd;
+  color: #000000;
+}
+</style>
+
+<table id="T_930fd" class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_930fd_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">skill_python</th>
+<th id="T_930fd_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">skill_sql</th>
+<th id="T_930fd_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">skill_spark</th>
+<th id="T_930fd_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">skill_r</th>
+<th id="T_930fd_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">skill_scala</th>
+<th id="T_930fd_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">skill_docker</th>
+<th id="T_930fd_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">skill_tableau</th>
+<th id="T_930fd_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">skill_powerbi</th>
+<th id="T_930fd_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">skill_tensorflow</th>
+<th id="T_930fd_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">skill_pytorch</th>
+<th id="T_930fd_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">skill_machine_learning</th>
+<th id="T_930fd_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">skill_deep_learning</th>
+<th id="T_930fd_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">skill_aws</th>
+<th id="T_930fd_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">skill_azure</th>
+<th id="T_930fd_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">skill_gcp</th>
+<th id="T_930fd_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">seniority_junior</th>
+<th id="T_930fd_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">seniority_lead</th>
+<th id="T_930fd_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">seniority_midlevel</th>
+<th id="T_930fd_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">seniority_senior</th>
+<th id="T_930fd_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">seniority_unknown</th>
+<th id="T_930fd_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">status_hybrid</th>
+<th id="T_930fd_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">status_on-site</th>
+<th id="T_930fd_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">status_remote</th>
+<th id="T_930fd_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">status_unknown</th>
+<th id="T_930fd_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">industry_education</th>
+<th id="T_930fd_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">industry_energy</th>
+<th id="T_930fd_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">industry_finance</th>
+<th id="T_930fd_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">industry_healthcare</th>
+<th id="T_930fd_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">industry_logistics</th>
+<th id="T_930fd_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">industry_manufacturing</th>
+<th id="T_930fd_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">industry_retail</th>
+<th id="T_930fd_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">industry_technology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th id="T_930fd_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">cluster_0</th>
+<td id="T_930fd_row0_col0" class="data row0 col0">0.463923</td>
+<td id="T_930fd_row0_col1" class="data row0 col1">-0.094527</td>
+<td id="T_930fd_row0_col2" class="data row0 col2">0.479443</td>
+<td id="T_930fd_row0_col3" class="data row0 col3">0.600192</td>
+<td id="T_930fd_row0_col4" class="data row0 col4">0.298335</td>
+<td id="T_930fd_row0_col5" class="data row0 col5">0.760944</td>
+<td id="T_930fd_row0_col6" class="data row0 col6">-0.124916</td>
+<td id="T_930fd_row0_col7" class="data row0 col7">-0.019252</td>
+<td id="T_930fd_row0_col8" class="data row0 col8">1.772486</td>
+<td id="T_930fd_row0_col9" class="data row0 col9">1.836619</td>
+<td id="T_930fd_row0_col10" class="data row0 col10">0.623998</td>
+<td id="T_930fd_row0_col11" class="data row0 col11">1.147535</td>
+<td id="T_930fd_row0_col12" class="data row0 col12">0.687033</td>
+<td id="T_930fd_row0_col13" class="data row0 col13">0.772292</td>
+<td id="T_930fd_row0_col14" class="data row0 col14">0.792742</td>
+<td id="T_930fd_row0_col15" class="data row0 col15">0.090010</td>
+<td id="T_930fd_row0_col16" class="data row0 col16">0.017586</td>
+<td id="T_930fd_row0_col17" class="data row0 col17">-0.206620</td>
+<td id="T_930fd_row0_col18" class="data row0 col18">0.234329</td>
+<td id="T_930fd_row0_col19" class="data row0 col19">-0.260525</td>
+<td id="T_930fd_row0_col20" class="data row0 col20">0.091914</td>
+<td id="T_930fd_row0_col21" class="data row0 col21">-0.117267</td>
+<td id="T_930fd_row0_col22" class="data row0 col22">-0.130409</td>
+<td id="T_930fd_row0_col23" class="data row0 col23">0.139790</td>
+<td id="T_930fd_row0_col24" class="data row0 col24">-0.101678</td>
+<td id="T_930fd_row0_col25" class="data row0 col25">-0.009069</td>
+<td id="T_930fd_row0_col26" class="data row0 col26">0.051324</td>
+<td id="T_930fd_row0_col27" class="data row0 col27">-0.021373</td>
+<td id="T_930fd_row0_col28" class="data row0 col28">0.204854</td>
+<td id="T_930fd_row0_col29" class="data row0 col29">-0.086433</td>
+<td id="T_930fd_row0_col30" class="data row0 col30">0.001352</td>
+<td id="T_930fd_row0_col31" class="data row0 col31">-0.005122</td>
+</tr>
+<tr class="even">
+<th id="T_930fd_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">cluster_1</th>
+<td id="T_930fd_row1_col0" class="data row1 col0">0.495273</td>
+<td id="T_930fd_row1_col1" class="data row1 col1">0.501466</td>
+<td id="T_930fd_row1_col2" class="data row1 col2">0.166063</td>
+<td id="T_930fd_row1_col3" class="data row1 col3">0.578189</td>
+<td id="T_930fd_row1_col4" class="data row1 col4">0.284649</td>
+<td id="T_930fd_row1_col5" class="data row1 col5">-0.162708</td>
+<td id="T_930fd_row1_col6" class="data row1 col6">0.158013</td>
+<td id="T_930fd_row1_col7" class="data row1 col7">0.117237</td>
+<td id="T_930fd_row1_col8" class="data row1 col8">-0.323888</td>
+<td id="T_930fd_row1_col9" class="data row1 col9">-0.395593</td>
+<td id="T_930fd_row1_col10" class="data row1 col10">0.419866</td>
+<td id="T_930fd_row1_col11" class="data row1 col11">-0.101473</td>
+<td id="T_930fd_row1_col12" class="data row1 col12">0.051005</td>
+<td id="T_930fd_row1_col13" class="data row1 col13">-0.058847</td>
+<td id="T_930fd_row1_col14" class="data row1 col14">-0.140399</td>
+<td id="T_930fd_row1_col15" class="data row1 col15">-0.124625</td>
+<td id="T_930fd_row1_col16" class="data row1 col16">0.079153</td>
+<td id="T_930fd_row1_col17" class="data row1 col17">-0.229183</td>
+<td id="T_930fd_row1_col18" class="data row1 col18">0.280120</td>
+<td id="T_930fd_row1_col19" class="data row1 col19">-0.260525</td>
+<td id="T_930fd_row1_col20" class="data row1 col20">-0.013746</td>
+<td id="T_930fd_row1_col21" class="data row1 col21">0.573289</td>
+<td id="T_930fd_row1_col22" class="data row1 col22">-0.094185</td>
+<td id="T_930fd_row1_col23" class="data row1 col23">-0.544479</td>
+<td id="T_930fd_row1_col24" class="data row1 col24">-0.051142</td>
+<td id="T_930fd_row1_col25" class="data row1 col25">-0.084583</td>
+<td id="T_930fd_row1_col26" class="data row1 col26">0.032522</td>
+<td id="T_930fd_row1_col27" class="data row1 col27">-0.001925</td>
+<td id="T_930fd_row1_col28" class="data row1 col28">-0.065233</td>
+<td id="T_930fd_row1_col29" class="data row1 col29">0.064455</td>
+<td id="T_930fd_row1_col30" class="data row1 col30">0.433649</td>
+<td id="T_930fd_row1_col31" class="data row1 col31">-0.276256</td>
+</tr>
+<tr class="odd">
+<th id="T_930fd_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">cluster_2</th>
+<td id="T_930fd_row2_col0" class="data row2 col0">-1.287720</td>
+<td id="T_930fd_row2_col1" class="data row2 col1">-0.827945</td>
+<td id="T_930fd_row2_col2" class="data row2 col2">-0.453453</td>
+<td id="T_930fd_row2_col3" class="data row2 col3">-1.598912</td>
+<td id="T_930fd_row2_col4" class="data row2 col4">-0.314567</td>
+<td id="T_930fd_row2_col5" class="data row2 col5">-0.246321</td>
+<td id="T_930fd_row2_col6" class="data row2 col6">-0.296855</td>
+<td id="T_930fd_row2_col7" class="data row2 col7">-0.164935</td>
+<td id="T_930fd_row2_col8" class="data row2 col8">-0.460228</td>
+<td id="T_930fd_row2_col9" class="data row2 col9">-0.431196</td>
+<td id="T_930fd_row2_col10" class="data row2 col10">-1.236186</td>
+<td id="T_930fd_row2_col11" class="data row2 col11">-0.482054</td>
+<td id="T_930fd_row2_col12" class="data row2 col12">-0.487647</td>
+<td id="T_930fd_row2_col13" class="data row2 col13">-0.431790</td>
+<td id="T_930fd_row2_col14" class="data row2 col14">-0.328815</td>
+<td id="T_930fd_row2_col15" class="data row2 col15">-0.112156</td>
+<td id="T_930fd_row2_col16" class="data row2 col16">-0.025813</td>
+<td id="T_930fd_row2_col17" class="data row2 col17">-0.264329</td>
+<td id="T_930fd_row2_col18" class="data row2 col18">-0.166378</td>
+<td id="T_930fd_row2_col19" class="data row2 col19">0.781575</td>
+<td id="T_930fd_row2_col20" class="data row2 col20">0.320030</td>
+<td id="T_930fd_row2_col21" class="data row2 col21">-0.111053</td>
+<td id="T_930fd_row2_col22" class="data row2 col22">0.339527</td>
+<td id="T_930fd_row2_col23" class="data row2 col23">-0.428902</td>
+<td id="T_930fd_row2_col24" class="data row2 col24">-0.082975</td>
+<td id="T_930fd_row2_col25" class="data row2 col25">0.037823</td>
+<td id="T_930fd_row2_col26" class="data row2 col26">-0.071403</td>
+<td id="T_930fd_row2_col27" class="data row2 col27">-0.071074</td>
+<td id="T_930fd_row2_col28" class="data row2 col28">0.000000</td>
+<td id="T_930fd_row2_col29" class="data row2 col29">0.012348</td>
+<td id="T_930fd_row2_col30" class="data row2 col30">-0.257523</td>
+<td id="T_930fd_row2_col31" class="data row2 col31">0.274508</td>
+</tr>
+<tr class="even">
+<th id="T_930fd_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">cluster_3</th>
+<td id="T_930fd_row3_col0" class="data row3 col0">0.313737</td>
+<td id="T_930fd_row3_col1" class="data row3 col1">0.248272</td>
+<td id="T_930fd_row3_col2" class="data row3 col2">-0.115278</td>
+<td id="T_930fd_row3_col3" class="data row3 col3">0.421272</td>
+<td id="T_930fd_row3_col4" class="data row3 col4">-0.283922</td>
+<td id="T_930fd_row3_col5" class="data row3 col5">-0.095231</td>
+<td id="T_930fd_row3_col6" class="data row3 col6">0.186808</td>
+<td id="T_930fd_row3_col7" class="data row3 col7">0.026274</td>
+<td id="T_930fd_row3_col8" class="data row3 col8">-0.414034</td>
+<td id="T_930fd_row3_col9" class="data row3 col9">-0.395007</td>
+<td id="T_930fd_row3_col10" class="data row3 col10">0.242533</td>
+<td id="T_930fd_row3_col11" class="data row3 col11">-0.224160</td>
+<td id="T_930fd_row3_col12" class="data row3 col12">-0.079643</td>
+<td id="T_930fd_row3_col13" class="data row3 col13">-0.052525</td>
+<td id="T_930fd_row3_col14" class="data row3 col14">-0.063926</td>
+<td id="T_930fd_row3_col15" class="data row3 col15">0.217482</td>
+<td id="T_930fd_row3_col16" class="data row3 col16">-0.093744</td>
+<td id="T_930fd_row3_col17" class="data row3 col17">0.739172</td>
+<td id="T_930fd_row3_col18" class="data row3 col18">-0.383167</td>
+<td id="T_930fd_row3_col19" class="data row3 col19">-0.260525</td>
+<td id="T_930fd_row3_col20" class="data row3 col20">-0.381566</td>
+<td id="T_930fd_row3_col21" class="data row3 col21">-0.574058</td>
+<td id="T_930fd_row3_col22" class="data row3 col22">-0.125988</td>
+<td id="T_930fd_row3_col23" class="data row3 col23">1.077021</td>
+<td id="T_930fd_row3_col24" class="data row3 col24">0.231455</td>
+<td id="T_930fd_row3_col25" class="data row3 col25">0.082283</td>
+<td id="T_930fd_row3_col26" class="data row3 col26">-0.008660</td>
+<td id="T_930fd_row3_col27" class="data row3 col27">0.092206</td>
+<td id="T_930fd_row3_col28" class="data row3 col28">-0.065233</td>
+<td id="T_930fd_row3_col29" class="data row3 col29">-0.035310</td>
+<td id="T_930fd_row3_col30" class="data row3 col30">-0.322164</td>
+<td id="T_930fd_row3_col31" class="data row3 col31">0.094102</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Cluster 0</strong>: represents <strong>Machine Learning Engineers/AI Engineers</strong>, characterized by the strongest deep learning stack (TensorFlow, PyTorch, ML, DL), the broadest cloud expertise (AWS/Azure/GCP), and robust programming (Python, R, Docker). They are more common in logistics and rarely appear in manufacturing, and they tend to work in hybrid settings rather than fully on-site roles.</p>
+<p><strong>Cluster 1</strong> represents senior <strong>Data Engineering and Analytics Engineering</strong> roles. These jobs show the highest proficiency in Python, SQL, Spark, Scala, and Tableau, and appear predominantly in finance, healthcare, manufacturing, and retail. The strong presence of lead-level roles and on-site work further indicates a traditional enterprise engineering environment rather than modern remote ML roles.</p>
+<p><strong>Cluster 2</strong> consists of low-information or non-technical data roles. These job postings show the lowest levels of programming, analytics, cloud, and machine learning skills across all clusters. They also contain the highest proportion of unknown seniority and are most frequently remote or hybrid. The absence of clear technical requirements and the inconsistent industry pattern suggest that these positions are general data-related or support roles rather than specialized data engineering, analytics, or machine learning positions.</p>
+<p><strong>Cluster 3</strong> represents <strong>mid-level generalist data roles</strong>, including <strong>Data Analysts and Data Scientists</strong> who work across education, energy, and technology sectors. These jobs show strong Python, SQL, and Tableau usage, moderate R, and only limited machine learning depth. The seniority pattern is centered on mid-level positions, indicating roles that require solid technical competence without the advanced ML or engineering specialization seen in Clusters 0 and 1.</p>
+<p><strong>The purpose of K-means clustering is to uncover natural job families based on shared skill profiles, seniority, and industry characteristics. By grouping similar postings together without using salary, we can identify distinct job types and then compare their compensation and skill requirements in subsequent analysis.</strong></p>
+<div id="12f71eb1" class="cell" data-execution_count="77">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"cluster"</span>].value_counts().plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Number of Job Postings per Cluster"</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Cluster"</span>)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ml_methods_files/figure-html/cell-27-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cb58e7cb" class="cell" data-execution_count="78">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>df.boxplot(column<span class="op">=</span><span class="st">"salary_avg"</span>, by<span class="op">=</span><span class="st">"cluster"</span>, figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">5</span>))</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Salary Distribution by Cluster"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">""</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Cluster"</span>)</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Salary"</span>)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ml_methods_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="supervised-regression-modeling-for-salary-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-regression-modeling-for-salary-prediction">Supervised Regression Modeling for Salary Prediction</h2>
+<div id="c44eb7ff" class="cell" data-execution_count="103">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ===== Block 1 – Clean skill columns =====</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Define the *valid* skills you actually care about</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>skill_keywords <span class="op">=</span> [</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python"</span>, <span class="st">"sql"</span>, <span class="st">"spark"</span>, <span class="st">"r"</span>, <span class="st">"scala"</span>, <span class="st">"docker"</span>,</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"excel"</span>, <span class="st">"tableau"</span>, <span class="st">"power bi"</span>,</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tensorflow"</span>, <span class="st">"pytorch"</span>, <span class="st">"machine learning"</span>, <span class="st">"deep learning"</span>,</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"aws"</span>, <span class="st">"azure"</span>, <span class="st">"gcp"</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>valid_skill_cols <span class="op">=</span> [</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"skill_"</span> <span class="op">+</span> kw.lower().replace(<span class="st">" "</span>, <span class="st">"_"</span>) <span class="cf">for</span> kw <span class="kw">in</span> skill_keywords</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Find ALL columns that start with "skill_"</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>all_skill_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> df.columns <span class="cf">if</span> c.startswith(<span class="st">"skill_"</span>)]</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Anything that starts with "skill_" but is not in our valid list is garbage</span></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>extra_skill_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> all_skill_cols <span class="cf">if</span> c <span class="kw">not</span> <span class="kw">in</span> valid_skill_cols]</span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Extra / invalid skill columns to drop:"</span>)</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(extra_skill_cols)</span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Drop the garbage columns</span></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop(columns<span class="op">=</span>extra_skill_cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Extra / invalid skill columns to drop:
+['skill_powerbi']</code></pre>
+</div>
+</div>
+<div id="5f74ee86" class="cell" data-execution_count="105">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ===== Block 2 – Build X and y for salary regression (robust) =====</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure salary_avg exists and is numeric</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"salary_avg"</span>] <span class="op">=</span> df[<span class="st">"salary_avg"</span>].astype(<span class="bu">float</span>)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with missing salary</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>reg_df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"salary_avg"</span>]).copy()</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Skills (already cleaned)</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>skill_cols <span class="op">=</span> valid_skill_cols</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Seniority / status / industry dummies</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>seniority_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> reg_df.columns </span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">if</span> c.startswith(<span class="st">"seniority_"</span>) <span class="kw">and</span> c <span class="op">!=</span> <span class="st">"seniority_level"</span>]</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>status_cols    <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> reg_df.columns <span class="cf">if</span> c.startswith(<span class="st">"status_"</span>)]</span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>industry_cols  <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> reg_df.columns <span class="cf">if</span> c.startswith(<span class="st">"industry_"</span>)]</span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="co"># All desired features</span></span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>feature_cols <span class="op">=</span> skill_cols <span class="op">+</span> seniority_cols <span class="op">+</span> status_cols <span class="op">+</span> industry_cols</span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only columns that actually exist in reg_df</span></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a>available_features <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> feature_cols <span class="cf">if</span> c <span class="kw">in</span> reg_df.columns]</span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a>missing_features   <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(feature_cols) <span class="op">-</span> <span class="bu">set</span>(available_features))</span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of desired features:"</span>, <span class="bu">len</span>(feature_cols))</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of available features:"</span>, <span class="bu">len</span>(available_features))</span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> missing_features:</span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">These expected features were NOT found in reg_df and will be ignored:"</span>)</span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> c <span class="kw">in</span> missing_features:</span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"  -"</span>, c)</span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Build X and y</span></span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> reg_df[available_features].astype(<span class="bu">float</span>)</span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> reg_df[<span class="st">"salary_avg"</span>].astype(<span class="bu">float</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of desired features: 33
+Number of available features: 31
+
+These expected features were NOT found in reg_df and will be ignored:
+  - skill_excel
+  - skill_power_bi</code></pre>
+</div>
+</div>
+<div id="ac90f51c" class="cell" data-execution_count="106">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    X, y,</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>X_train.shape, X_test.shape, y_train.shape, y_test.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="106">
+<pre><code>((415, 31), (179, 31), (415,), (179,))</code></pre>
+</div>
+</div>
+<div id="bb407d09" class="cell" data-execution_count="107">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Make sure X_train is purely numeric (float)</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>X_train_sm <span class="op">=</span> X_train.astype(<span class="bu">float</span>)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Add intercept term</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>X_train_sm <span class="op">=</span> sm.add_constant(X_train_sm)</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Ensure y is numeric 1-D array</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>y_train_sm <span class="op">=</span> y_train.astype(<span class="bu">float</span>)</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Fit OLS model</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>ols_model <span class="op">=</span> sm.OLS(y_train_sm, X_train_sm).fit()</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Show R-style summary: coefficients, p-values, R², etc.</span></span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ols_model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             salary_avg   R-squared:                       0.368
+Model:                            OLS   Adj. R-squared:                  0.322
+Method:                 Least Squares   F-statistic:                     8.011
+Date:                Sun, 07 Dec 2025   Prob (F-statistic):           1.31e-24
+Time:                        05:37:13   Log-Likelihood:                -5019.9
+No. Observations:                 415   AIC:                         1.010e+04
+Df Residuals:                     386   BIC:                         1.021e+04
+Df Model:                          28                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+const                   9.455e+04   5203.625     18.170      0.000    8.43e+04    1.05e+05
+skill_python            7541.9936   8348.852      0.903      0.367   -8872.924     2.4e+04
+skill_sql              -9547.7980   6461.924     -1.478      0.140   -2.23e+04    3157.177
+skill_spark            -4222.9763   7531.012     -0.561      0.575    -1.9e+04    1.06e+04
+skill_r                 3661.1136   9535.023      0.384      0.701   -1.51e+04    2.24e+04
+skill_scala             1.722e+04   1.01e+04      1.706      0.089   -2627.626    3.71e+04
+skill_docker            6289.2099   1.23e+04      0.510      0.611    -1.8e+04    3.05e+04
+skill_tableau          -4514.2138   7401.219     -0.610      0.542   -1.91e+04       1e+04
+skill_tensorflow        9381.2722   1.06e+04      0.886      0.376   -1.14e+04    3.02e+04
+skill_pytorch          -1.032e+04   1.19e+04     -0.866      0.387   -3.38e+04    1.31e+04
+skill_machine_learning -2.715e+04   7416.228     -3.660      0.000   -4.17e+04   -1.26e+04
+skill_deep_learning     8436.1008   7252.748      1.163      0.245   -5823.736    2.27e+04
+skill_aws              -7315.6652   7080.626     -1.033      0.302   -2.12e+04    6605.757
+skill_azure            -1.731e+04   8697.296     -1.990      0.047   -3.44e+04    -208.468
+skill_gcp               5846.3622   9966.892      0.587      0.558   -1.37e+04    2.54e+04
+seniority_junior        1.045e+04   1.16e+04      0.901      0.368   -1.24e+04    3.33e+04
+seniority_lead           6.41e+04   7120.742      9.001      0.000    5.01e+04    7.81e+04
+seniority_midlevel      6504.6449   6607.781      0.984      0.326   -6487.103    1.95e+04
+seniority_senior        2.147e+04   4356.793      4.927      0.000    1.29e+04       3e+04
+seniority_unknown      -7967.8666   8342.888     -0.955      0.340   -2.44e+04    8435.324
+status_hybrid           2.512e+04   4363.442      5.756      0.000    1.65e+04    3.37e+04
+status_on-site          4.884e+04   3907.818     12.498      0.000    4.12e+04    5.65e+04
+status_remote           3.483e+04   5588.138      6.233      0.000    2.38e+04    4.58e+04
+status_unknown         -1.424e+04   4809.358     -2.961      0.003   -2.37e+04   -4783.127
+industry_education     -3451.9383   1.39e+04     -0.248      0.804   -3.08e+04    2.39e+04
+industry_energy         2.739e+04   1.78e+04      1.542      0.124   -7534.737    6.23e+04
+industry_finance        2.389e+04   9049.384      2.640      0.009    6095.236    4.17e+04
+industry_healthcare     1.192e+04   9242.597      1.290      0.198   -6250.346    3.01e+04
+industry_logistics      4.458e+04   4.09e+04      1.089      0.277   -3.59e+04    1.25e+05
+industry_manufacturing -3.774e+04   1.91e+04     -1.972      0.049   -7.54e+04    -105.124
+industry_retail         1.624e+04   1.02e+04      1.592      0.112   -3811.470    3.63e+04
+industry_technology     1.173e+04   7046.224      1.664      0.097   -2126.708    2.56e+04
+==============================================================================
+Omnibus:                        5.510   Durbin-Watson:                   1.973
+Prob(Omnibus):                  0.064   Jarque-Bera (JB):                5.609
+Skew:                          -0.281   Prob(JB):                       0.0605
+Kurtosis:                       2.908   Cond. No.                     1.09e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.55e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.</code></pre>
+</div>
+</div>
+<div id="c132139f" class="cell" data-execution_count="108">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestRegressor</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> r2_score, mean_squared_error</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------- Multiple Linear Regression ----------</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>lin_reg <span class="op">=</span> LinearRegression()</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>lin_reg.fit(X_train, y_train)</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>y_pred_lin <span class="op">=</span> lin_reg.predict(X_test)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>lin_r2 <span class="op">=</span> r2_score(y_test, y_pred_lin)</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>lin_mse <span class="op">=</span> mean_squared_error(y_test, y_pred_lin)</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>lin_rmse <span class="op">=</span> np.sqrt(lin_mse)</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Multiple Linear Regression ==="</span>)</span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"R²:   </span><span class="sc">{</span>lin_r2<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"RMSE: </span><span class="sc">{</span>lin_rmse<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------- Random Forest Regression ----------</span></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>rf_reg <span class="op">=</span> RandomForestRegressor(</span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>    n_estimators<span class="op">=</span><span class="dv">300</span>,</span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span>,</span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a>    n_jobs<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a>rf_reg.fit(X_train, y_train)</span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>y_pred_rf <span class="op">=</span> rf_reg.predict(X_test)</span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a>rf_r2 <span class="op">=</span> r2_score(y_test, y_pred_rf)</span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>rf_mse <span class="op">=</span> mean_squared_error(y_test, y_pred_rf)</span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>rf_rmse <span class="op">=</span> np.sqrt(rf_mse)</span>
+<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">=== Random Forest Regression ==="</span>)</span>
+<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"R²:   </span><span class="sc">{</span>rf_r2<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"RMSE: </span><span class="sc">{</span>rf_rmse<span class="sc">:,.0f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== Multiple Linear Regression ===
+R²:   0.010
+RMSE: 57,183
+
+=== Random Forest Regression ===
+R²:   0.210
+RMSE: 51,108</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mishalaboobackar\.github\.io\/ad688-employability-sp25A1-group6\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
