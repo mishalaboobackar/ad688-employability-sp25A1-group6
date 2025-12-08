@@ -166,16 +166,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#select-relevant-columns" id="toc-select-relevant-columns" class="nav-link active" data-scroll-target="#select-relevant-columns">1. Select Relevant Columns</a></li>
   <li><a href="#create-duration-feature" id="toc-create-duration-feature" class="nav-link" data-scroll-target="#create-duration-feature">2. Create Duration Feature</a></li>
   <li><a href="#explore-lot_v6_occupation_name-for-filtering" id="toc-explore-lot_v6_occupation_name-for-filtering" class="nav-link" data-scroll-target="#explore-lot_v6_occupation_name-for-filtering">3. Explore LOT_V6_OCCUPATION_NAME for Filtering</a></li>
-  <li><a href="#clean-string-formatting" id="toc-clean-string-formatting" class="nav-link" data-scroll-target="#clean-string-formatting">4. Clean String Formatting</a></li>
-  <li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values">5. Handling Missing Values</a>
+  <li><a href="#clean-string-formatting" id="toc-clean-string-formatting" class="nav-link" data-scroll-target="#clean-string-formatting">4. Clean String Formatting</a>
   <ul class="collapse">
-  <li><a href="#salary" id="toc-salary" class="nav-link" data-scroll-target="#salary">5.1 Salary</a></li>
-  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">5.2 SKILLS</a></li>
-  <li><a href="#remote_type_name-and-software_skills_name" id="toc-remote_type_name-and-software_skills_name" class="nav-link" data-scroll-target="#remote_type_name-and-software_skills_name">5.3 REMOTE_TYPE_NAME AND SOFTWARE_SKILLS_NAME</a></li>
-  <li><a href="#min_years_experience" id="toc-min_years_experience" class="nav-link" data-scroll-target="#min_years_experience">5.4 MIN_YEARS_EXPERIENCE</a></li>
+  <li><a href="#clean-body-column" id="toc-clean-body-column" class="nav-link" data-scroll-target="#clean-body-column">4.1 Clean BODY Column</a></li>
   </ul></li>
-  <li><a href="#table-order" id="toc-table-order" class="nav-link" data-scroll-target="#table-order">6. Table Order</a></li>
-  <li><a href="#cleaned-dataset-summary" id="toc-cleaned-dataset-summary" class="nav-link" data-scroll-target="#cleaned-dataset-summary">7. Cleaned Dataset summary</a></li>
+  <li><a href="#excluding-unknown-values" id="toc-excluding-unknown-values" class="nav-link" data-scroll-target="#excluding-unknown-values">5. Excluding Unknown Values</a></li>
+  <li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values">6. Handling Missing Values</a>
+  <ul class="collapse">
+  <li><a href="#salary" id="toc-salary" class="nav-link" data-scroll-target="#salary">6.1 Salary</a></li>
+  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">6.2 SKILLS</a></li>
+  <li><a href="#remote_type_name-and-software_skills_name" id="toc-remote_type_name-and-software_skills_name" class="nav-link" data-scroll-target="#remote_type_name-and-software_skills_name">6.3 REMOTE_TYPE_NAME AND SOFTWARE_SKILLS_NAME</a></li>
+  <li><a href="#min_years_experience" id="toc-min_years_experience" class="nav-link" data-scroll-target="#min_years_experience">6.4 MIN_YEARS_EXPERIENCE</a></li>
+  </ul></li>
+  <li><a href="#table-order" id="toc-table-order" class="nav-link" data-scroll-target="#table-order">7. Table Order</a></li>
+  <li><a href="#cleaned-dataset-summary" id="toc-cleaned-dataset-summary" class="nav-link" data-scroll-target="#cleaned-dataset-summary">8. Cleaned Dataset summary</a></li>
   </ul>
 </nav>
     </div>
@@ -1053,7 +1057,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>columns_to_keep <span class="op">=</span> [</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'POSTED'</span>, <span class="st">'EXPIRED'</span>,<span class="st">'TITLE_NAME'</span>, <span class="st">'COMPANY_NAME'</span>,<span class="st">'SOURCE_TYPES'</span>, <span class="st">'COMPANY_IS_STAFFING'</span>, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'POSTED'</span>, <span class="st">'EXPIRED'</span>,<span class="st">'TITLE_NAME'</span>, <span class="st">'BODY'</span>, <span class="st">'COMPANY_NAME'</span>,<span class="st">'SOURCE_TYPES'</span>, <span class="st">'COMPANY_IS_STAFFING'</span>, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>,<span class="st">'STATE_NAME'</span>, <span class="st">'CITY_NAME'</span>,<span class="st">'REMOTE_TYPE_NAME'</span>, </span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'EMPLOYMENT_TYPE_NAME'</span>,<span class="st">'MIN_YEARS_EXPERIENCE'</span>,<span class="st">'MIN_EDULEVELS_NAME'</span>,<span class="st">'SKILLS_NAME'</span>, <span class="st">'SOFTWARE_SKILLS_NAME'</span>,</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'LOT_V6_OCCUPATION_NAME'</span>,<span class="st">'NAICS_2022_2_NAME'</span></span>
@@ -1066,10 +1070,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.columns.tolist())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Shape after column selection: (72498, 19)
+<pre><code>Shape after column selection: (72498, 20)
 
-Columns kept (19):
-['POSTED', 'EXPIRED', 'TITLE_NAME', 'COMPANY_NAME', 'SOURCE_TYPES', 'COMPANY_IS_STAFFING', 'SALARY', 'SALARY_FROM', 'SALARY_TO', 'STATE_NAME', 'CITY_NAME', 'REMOTE_TYPE_NAME', 'EMPLOYMENT_TYPE_NAME', 'MIN_YEARS_EXPERIENCE', 'MIN_EDULEVELS_NAME', 'SKILLS_NAME', 'SOFTWARE_SKILLS_NAME', 'LOT_V6_OCCUPATION_NAME', 'NAICS_2022_2_NAME']</code></pre>
+Columns kept (20):
+['POSTED', 'EXPIRED', 'TITLE_NAME', 'BODY', 'COMPANY_NAME', 'SOURCE_TYPES', 'COMPANY_IS_STAFFING', 'SALARY', 'SALARY_FROM', 'SALARY_TO', 'STATE_NAME', 'CITY_NAME', 'REMOTE_TYPE_NAME', 'EMPLOYMENT_TYPE_NAME', 'MIN_YEARS_EXPERIENCE', 'MIN_EDULEVELS_NAME', 'SKILLS_NAME', 'SOFTWARE_SKILLS_NAME', 'LOT_V6_OCCUPATION_NAME', 'NAICS_2022_2_NAME']</code></pre>
 </div>
 </div>
 </section>
@@ -1104,7 +1108,7 @@ min          0.000000
 max        119.000000
 Name: DURATION, dtype: float64
 
-Shape: (64654, 19)</code></pre>
+Shape: (64654, 20)</code></pre>
 </div>
 </div>
 </section>
@@ -1147,7 +1151,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">'LOT_V6_OCCUPATION_NAME'</span>].value_counts())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Shape after filtering: (57220, 19)
+<pre><code>Shape after filtering: (57220, 20)
 
 Occupations kept:
 LOT_V6_OCCUPATION_NAME
@@ -1221,54 +1225,147 @@ Name: count, dtype: int64</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Cleaning: SKILLS_NAME
 Cleaning: SOFTWARE_SKILLS_NAME
+Cleaning: SOFTWARE_SKILLS_NAME
 Cleaning: SOURCE_TYPES
+Cleaning: SOURCE_TYPES
+Cleaning: REMOTE_TYPE_NAME
+Cleaning: EMPLOYMENT_TYPE_NAME
+Cleaning: MIN_EDULEVELS_NAME
 Cleaning: REMOTE_TYPE_NAME
 Cleaning: EMPLOYMENT_TYPE_NAME
 Cleaning: MIN_EDULEVELS_NAME</code></pre>
 </div>
 </div>
-</section>
-<section id="handling-missing-values" class="level2">
-<h2 class="anchored" data-anchor-id="handling-missing-values">5. Handling Missing Values</h2>
-<section id="salary" class="level3">
-<h3 class="anchored" data-anchor-id="salary">5.1 Salary</h3>
-<div id="5eb36c5f" class="cell" data-execution_count="7">
+<section id="clean-body-column" class="level3">
+<h3 class="anchored" data-anchor-id="clean-body-column">4.1 Clean BODY Column</h3>
+<p>Remove newlines, HTML artifacts, and junk descriptions that are scraped webpage content rather than actual job descriptions.</p>
+<div id="851efba1" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Missing salary values BEFORE imputation:"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY: </span><span class="sc">{</span>df[<span class="st">'SALARY'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_FROM: </span><span class="sc">{</span>df[<span class="st">'SALARY_FROM'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_TO: </span><span class="sc">{</span>df[<span class="st">'SALARY_TO'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>salary_cols <span class="op">=</span> [<span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>]</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> salary_cols:</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        median_by_occupation <span class="op">=</span> df.groupby(<span class="st">'LOT_V6_OCCUPATION_NAME'</span>)[col].transform(<span class="st">'median'</span>)</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        df[col] <span class="op">=</span> df[col].fillna(median_by_occupation)</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean BODY column</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_body(text):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(text):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.nan</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(text, <span class="bu">str</span>):</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> text</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove \n and excessive whitespace</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    cleaned <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="ch">\n</span><span class="op">+</span><span class="vs">'</span>, <span class="st">' '</span>, text)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    cleaned <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="dv">\s</span><span class="op">+</span><span class="vs">'</span>, <span class="st">' '</span>, cleaned)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    cleaned <span class="op">=</span> cleaned.strip()</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cleaned <span class="cf">if</span> cleaned <span class="cf">else</span> np.nan</span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> salary_cols:</span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        remaining_na <span class="op">=</span> df[col].isna().<span class="bu">sum</span>()</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> remaining_na <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>            overall_median <span class="op">=</span> df[col].median()</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>            df[col] <span class="op">=</span> df[col].fillna(overall_median)</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Filled </span><span class="sc">{</span>remaining_na<span class="sc">}</span><span class="ss"> remaining </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss"> NaN with overall median: </span><span class="sc">{</span>overall_median<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Final missing salary values:"</span>)</span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY: </span><span class="sc">{</span>df[<span class="st">'SALARY'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_FROM: </span><span class="sc">{</span>df[<span class="st">'SALARY_FROM'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_TO: </span><span class="sc">{</span>df[<span class="st">'SALARY_TO'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Junk patterns to filter out (scraped webpage artifacts, not real job descriptions)</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>junk_patterns <span class="op">=</span> [</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Find jobs</span><span class="dv">\s</span><span class="op">*</span><span class="vs">Search</span><span class="dv">\s</span><span class="op">*</span><span class="vs">Enter any'</span>,  <span class="co"># Scraped job board UI</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Search for jobs'</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Loading</span><span class="ch">\.\.\.</span><span class="vs">'</span>,</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Please wait'</span>,</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Click here to'</span>,</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">^</span><span class="vs">Apply now'</span>,</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply cleaning</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"BODY column before cleaning: </span><span class="sc">{</span>df[<span class="st">'BODY'</span>]<span class="sc">.</span>notna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> non-null values"</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'BODY'</span>] <span class="op">=</span> df[<span class="st">'BODY'</span>].<span class="bu">apply</span>(clean_body)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove junk descriptions</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pattern <span class="kw">in</span> junk_patterns:</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> df[<span class="st">'BODY'</span>].<span class="bu">str</span>.contains(pattern, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>, regex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>    junk_count <span class="op">=</span> mask.<span class="bu">sum</span>()</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> junk_count <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Removing </span><span class="sc">{</span>junk_count<span class="sc">}</span><span class="ss"> rows matching junk pattern: </span><span class="sc">{</span>pattern[:<span class="dv">40</span>]<span class="sc">}</span><span class="ss">..."</span>)</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>        df.loc[mask, <span class="st">'BODY'</span>] <span class="op">=</span> np.nan</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove very short descriptions (likely incomplete)</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>short_mask <span class="op">=</span> df[<span class="st">'BODY'</span>].<span class="bu">str</span>.<span class="bu">len</span>() <span class="op">&lt;</span> <span class="dv">50</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>short_count <span class="op">=</span> short_mask.<span class="bu">sum</span>()</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> short_count <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Setting </span><span class="sc">{</span>short_count<span class="sc">}</span><span class="ss"> very short descriptions (&lt;50 chars) to NaN"</span>)</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>    df.loc[short_mask, <span class="st">'BODY'</span>] <span class="op">=</span> np.nan</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">BODY column after cleaning: </span><span class="sc">{</span>df[<span class="st">'BODY'</span>]<span class="sc">.</span>notna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> non-null values"</span>)</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Sample cleaned BODY (first 200 chars):"</span>)</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df[<span class="st">'BODY'</span>].dropna().iloc[<span class="dv">0</span>]</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sample[:<span class="dv">200</span>] <span class="op">+</span> <span class="st">"..."</span> <span class="cf">if</span> <span class="bu">len</span>(<span class="bu">str</span>(sample)) <span class="op">&gt;</span> <span class="dv">200</span> <span class="cf">else</span> sample)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>BODY column before cleaning: 57220 non-null values
+Removing 207 rows matching junk pattern: ^Find jobs\s*Search\s*Enter any...
+Removing 4 rows matching junk pattern: ^Loading\.\.\....
+Removing 207 rows matching junk pattern: ^Find jobs\s*Search\s*Enter any...
+Removing 4 rows matching junk pattern: ^Loading\.\.\....
+Setting 29 very short descriptions (&lt;50 chars) to NaN
+
+BODY column after cleaning: 56980 non-null values
+
+Sample cleaned BODY (first 200 chars):
+31-May-2024 Enterprise Analyst (II-III) Merchandising El Dorado Arkansas Job Posting GENERAL DESCRIPTION OF POSITION Performs business analysis using various techniques, e.g. statistical analysis, exp...
+Setting 29 very short descriptions (&lt;50 chars) to NaN
+
+BODY column after cleaning: 56980 non-null values
+
+Sample cleaned BODY (first 200 chars):
+31-May-2024 Enterprise Analyst (II-III) Merchandising El Dorado Arkansas Job Posting GENERAL DESCRIPTION OF POSITION Performs business analysis using various techniques, e.g. statistical analysis, exp...</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="excluding-unknown-values" class="level2">
+<h2 class="anchored" data-anchor-id="excluding-unknown-values">5. Excluding Unknown Values</h2>
+<div id="a4e3acfc" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'NAICS_2022_2_NAME'</span>].<span class="bu">str</span>.contains(<span class="st">'Unclassified'</span>, na<span class="op">=</span><span class="va">False</span>)].copy()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'COMPANY_NAME'</span>].<span class="bu">str</span>.contains(<span class="st">'Unclassified'</span>, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>)].copy()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'TITLE_NAME'</span>].<span class="bu">str</span>.contains(<span class="st">'Unclassified'</span>, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>)].copy()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="handling-missing-values" class="level2">
+<h2 class="anchored" data-anchor-id="handling-missing-values">6. Handling Missing Values</h2>
+<section id="salary" class="level3">
+<h3 class="anchored" data-anchor-id="salary">6.1 Salary</h3>
+<div id="5eb36c5f" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Missing salary values BEFORE imputation:"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY: </span><span class="sc">{</span>df[<span class="st">'SALARY'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_FROM: </span><span class="sc">{</span>df[<span class="st">'SALARY_FROM'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_TO: </span><span class="sc">{</span>df[<span class="st">'SALARY_TO'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>salary_cols <span class="op">=</span> [<span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> salary_cols:</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        median_by_occupation <span class="op">=</span> df.groupby(<span class="st">'LOT_V6_OCCUPATION_NAME'</span>)[col].transform(<span class="st">'median'</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>        df[col] <span class="op">=</span> df[col].fillna(median_by_occupation)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> salary_cols:</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>        remaining_na <span class="op">=</span> df[col].isna().<span class="bu">sum</span>()</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> remaining_na <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>            overall_median <span class="op">=</span> df[col].median()</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>            df[col] <span class="op">=</span> df[col].fillna(overall_median)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Filled </span><span class="sc">{</span>remaining_na<span class="sc">}</span><span class="ss"> remaining </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss"> NaN with overall median: </span><span class="sc">{</span>overall_median<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Final missing salary values:"</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY: </span><span class="sc">{</span>df[<span class="st">'SALARY'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_FROM: </span><span class="sc">{</span>df[<span class="st">'SALARY_FROM'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  SALARY_TO: </span><span class="sc">{</span>df[<span class="st">'SALARY_TO'</span>]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Missing salary values BEFORE imputation:
-  SALARY: 32833
-  SALARY_FROM: 31410
-  SALARY_TO: 31410
+  SALARY: 26716
+  SALARY_FROM: 25621
+  SALARY_TO: 25621
 
 Final missing salary values:
   SALARY: 0
@@ -1278,110 +1375,120 @@ Final missing salary values:
 </div>
 </section>
 <section id="skills" class="level3">
-<h3 class="anchored" data-anchor-id="skills">5.2 SKILLS</h3>
-<div id="1b97c020" class="cell" data-execution_count="8">
+<h3 class="anchored" data-anchor-id="skills">6.2 SKILLS</h3>
+<div id="1b97c020" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>before <span class="op">=</span> <span class="bu">len</span>(df)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">'SKILLS_NAME'</span>])</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>after <span class="op">=</span> <span class="bu">len</span>(df)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Removed </span><span class="sc">{</span>before <span class="op">-</span> after<span class="sc">}</span><span class="ss"> rows with no skills data"</span>)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Remaining rows: </span><span class="sc">{</span>after<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>before <span class="op">=</span> <span class="bu">len</span>(df)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">'SKILLS_NAME'</span>])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>after <span class="op">=</span> <span class="bu">len</span>(df)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Removed </span><span class="sc">{</span>before <span class="op">-</span> after<span class="sc">}</span><span class="ss"> rows with no skills data"</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Remaining rows: </span><span class="sc">{</span>after<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Removed 447 rows with no skills data
-Remaining rows: 56773</code></pre>
+<pre><code>Removed 197 rows with no skills data
+Remaining rows: 47513</code></pre>
 </div>
 </div>
 <p>We are dropping these rows since we are going to be analyze the skills required for these jobs.</p>
 </section>
 <section id="remote_type_name-and-software_skills_name" class="level3">
-<h3 class="anchored" data-anchor-id="remote_type_name-and-software_skills_name">5.3 REMOTE_TYPE_NAME AND SOFTWARE_SKILLS_NAME</h3>
-<div id="0acbfb22" class="cell" data-execution_count="9">
+<h3 class="anchored" data-anchor-id="remote_type_name-and-software_skills_name">6.3 REMOTE_TYPE_NAME AND SOFTWARE_SKILLS_NAME</h3>
+<div id="0acbfb22" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>categorical_fills <span class="op">=</span> {</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'REMOTE_TYPE_NAME'</span>: <span class="st">'Not Specified'</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SOFTWARE_SKILLS_NAME'</span>: <span class="st">'Not Listed'</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col, fill_value <span class="kw">in</span> categorical_fills.items():</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        df[col] <span class="op">=</span> df[col].fillna(fill_value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>categorical_fills <span class="op">=</span> {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'REMOTE_TYPE_NAME'</span>: <span class="st">'Not Specified'</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SOFTWARE_SKILLS_NAME'</span>: <span class="st">'Not Listed'</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col, fill_value <span class="kw">in</span> categorical_fills.items():</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="kw">in</span> df.columns:</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>        df[col] <span class="op">=</span> df[col].fillna(fill_value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="min_years_experience" class="level3">
-<h3 class="anchored" data-anchor-id="min_years_experience">5.4 MIN_YEARS_EXPERIENCE</h3>
-<div id="297319a2" class="cell" data-execution_count="10">
+<h3 class="anchored" data-anchor-id="min_years_experience">6.4 MIN_YEARS_EXPERIENCE</h3>
+<div id="297319a2" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  indicator for missing experience</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'EXPERIENCE_SPECIFIED'</span>] <span class="op">=</span> df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>].notna().astype(<span class="bu">int</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>] <span class="op">=</span> df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>].fillna(<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  indicator for missing experience</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'EXPERIENCE_SPECIFIED'</span>] <span class="op">=</span> df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>].notna().astype(<span class="bu">int</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>] <span class="op">=</span> df[<span class="st">'MIN_YEARS_EXPERIENCE'</span>].fillna(<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>We are not dropping thes rows, instead we are using another column to specify whether the experience was given or not, this method helps us to preserve our data since there are a lot of data points where minimum experience is not specified.</p>
 </section>
 </section>
 <section id="table-order" class="level2">
-<h2 class="anchored" data-anchor-id="table-order">6. Table Order</h2>
-<div id="a45d3bb7" class="cell" data-execution_count="11">
+<h2 class="anchored" data-anchor-id="table-order">7. Table Order</h2>
+<div id="a45d3bb7" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>column_order <span class="op">=</span> [</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TITLE_NAME'</span>, <span class="st">'COMPANY_NAME'</span>, <span class="st">'POSTED'</span>, <span class="st">'DURATION'</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>,</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'STATE_NAME'</span>, <span class="st">'CITY_NAME'</span>,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'REMOTE_TYPE_NAME'</span>, <span class="st">'EMPLOYMENT_TYPE_NAME'</span>,</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MIN_YEARS_EXPERIENCE'</span>,<span class="st">'EXPERIENCE_SPECIFIED'</span>, <span class="st">'MIN_EDULEVELS_NAME'</span>,</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SKILLS_NAME'</span>, <span class="st">'SOFTWARE_SKILLS_NAME'</span>,</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SOURCE_TYPES'</span>, <span class="st">'LOT_V6_OCCUPATION_NAME'</span>, <span class="st">'NAICS_2022_2_NAME'</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[column_order]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>column_order <span class="op">=</span> [</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TITLE_NAME'</span>, <span class="st">'COMPANY_NAME'</span>, <span class="st">'BODY'</span>, <span class="st">'POSTED'</span>, <span class="st">'DURATION'</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SALARY'</span>, <span class="st">'SALARY_FROM'</span>, <span class="st">'SALARY_TO'</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'STATE_NAME'</span>, <span class="st">'CITY_NAME'</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'REMOTE_TYPE_NAME'</span>, <span class="st">'EMPLOYMENT_TYPE_NAME'</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MIN_YEARS_EXPERIENCE'</span>,<span class="st">'EXPERIENCE_SPECIFIED'</span>, <span class="st">'MIN_EDULEVELS_NAME'</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SKILLS_NAME'</span>, <span class="st">'SOFTWARE_SKILLS_NAME'</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SOURCE_TYPES'</span>, <span class="st">'LOT_V6_OCCUPATION_NAME'</span>, <span class="st">'NAICS_2022_2_NAME'</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[column_order]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="cleaned-dataset-summary" class="level2">
-<h2 class="anchored" data-anchor-id="cleaned-dataset-summary">7. Cleaned Dataset summary</h2>
-<div id="4b3bf4b5" class="cell" data-execution_count="12">
+<h2 class="anchored" data-anchor-id="cleaned-dataset-summary">8. Cleaned Dataset summary</h2>
+<div id="ff6b7aa5" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>TITLE_NAME                0
-COMPANY_NAME              0
-POSTED                    0
-DURATION                  0
-SALARY                    0
-SALARY_FROM               0
-SALARY_TO                 0
-STATE_NAME                0
-CITY_NAME                 0
-REMOTE_TYPE_NAME          0
-EMPLOYMENT_TYPE_NAME      0
-MIN_YEARS_EXPERIENCE      0
-EXPERIENCE_SPECIFIED      0
-MIN_EDULEVELS_NAME        0
-SKILLS_NAME               0
-SOFTWARE_SKILLS_NAME      0
-SOURCE_TYPES              0
-LOT_V6_OCCUPATION_NAME    0
-NAICS_2022_2_NAME         0
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>(47513, 20)</code></pre>
+</div>
+</div>
+<div id="4b3bf4b5" class="cell" data-execution_count="15">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>TITLE_NAME                  0
+COMPANY_NAME                0
+BODY                      156
+POSTED                      0
+DURATION                    0
+SALARY                      0
+SALARY_FROM                 0
+SALARY_TO                   0
+STATE_NAME                  0
+CITY_NAME                   0
+REMOTE_TYPE_NAME            0
+EMPLOYMENT_TYPE_NAME        0
+MIN_YEARS_EXPERIENCE        0
+EXPERIENCE_SPECIFIED        0
+MIN_EDULEVELS_NAME          0
+SKILLS_NAME                 0
+SOFTWARE_SKILLS_NAME        0
+SOURCE_TYPES                0
+LOT_V6_OCCUPATION_NAME      0
+NAICS_2022_2_NAME           0
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="25cdf769" class="cell" data-execution_count="13">
+<div id="25cdf769" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -1401,29 +1508,29 @@ dtype: int64</code></pre>
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">count</th>
-<td>56773</td>
-<td>56773.000000</td>
-<td>56773.000000</td>
-<td>56773.000000</td>
-<td>56773.000000</td>
-<td>56773.000000</td>
-<td>56773.000000</td>
+<td>47513</td>
+<td>47513.000000</td>
+<td>47513.000000</td>
+<td>47513.000000</td>
+<td>47513.000000</td>
+<td>47513.000000</td>
+<td>47513.000000</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">mean</th>
-<td>2024-07-10 09:06:03.912423168</td>
-<td>35.069329</td>
-<td>111014.995050</td>
-<td>87708.293872</td>
-<td>128664.903229</td>
-<td>3.407623</td>
-<td>0.671270</td>
+<td>2024-07-10 14:42:13.251952128</td>
+<td>35.637426</td>
+<td>111674.426936</td>
+<td>87664.599562</td>
+<td>132083.203544</td>
+<td>3.494580</td>
+<td>0.692400</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">min</th>
 <td>2024-05-01 00:00:00</td>
 <td>0.000000</td>
-<td>15860.000000</td>
+<td>20583.000000</td>
 <td>10230.000000</td>
 <td>11148.000000</td>
 <td>0.000000</td>
@@ -1431,21 +1538,21 @@ dtype: int64</code></pre>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">25%</th>
-<td>2024-06-03 00:00:00</td>
+<td>2024-06-04 00:00:00</td>
 <td>14.000000</td>
-<td>95300.000000</td>
-<td>75600.000000</td>
-<td>107225.000000</td>
+<td>96008.000000</td>
+<td>76960.000000</td>
+<td>109100.000000</td>
 <td>0.000000</td>
 <td>0.000000</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">50%</th>
 <td>2024-07-09 00:00:00</td>
-<td>30.000000</td>
+<td>31.000000</td>
 <td>105000.000000</td>
-<td>81770.000000</td>
-<td>120750.000000</td>
+<td>81000.000000</td>
+<td>122000.000000</td>
 <td>3.000000</td>
 <td>1.000000</td>
 </tr>
@@ -1454,8 +1561,8 @@ dtype: int64</code></pre>
 <td>2024-08-16 00:00:00</td>
 <td>60.000000</td>
 <td>125900.000000</td>
-<td>97875.000000</td>
-<td>150000.000000</td>
+<td>96000.000000</td>
+<td>156800.000000</td>
 <td>5.000000</td>
 <td>1.000000</td>
 </tr>
@@ -1472,12 +1579,12 @@ dtype: int64</code></pre>
 <tr class="even">
 <th data-quarto-table-cell-role="th">std</th>
 <td>NaN</td>
-<td>23.855804</td>
-<td>29957.364868</td>
-<td>26816.028140</td>
-<td>42261.703578</td>
-<td>3.491146</td>
-<td>0.469756</td>
+<td>24.027774</td>
+<td>30031.592449</td>
+<td>25934.636196</td>
+<td>43204.011452</td>
+<td>3.464785</td>
+<td>0.461505</td>
 </tr>
 </tbody>
 </table>
@@ -1485,13 +1592,13 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="8ff4b068" class="cell" data-execution_count="14">
+<div id="8ff4b068" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>display(df.head())</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>df.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'data/lightcast_cleaned.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>display(df.head())</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>df.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'data/lightcast_cleaned.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1503,6 +1610,7 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">TITLE_NAME</th>
 <th data-quarto-table-cell-role="th">COMPANY_NAME</th>
+<th data-quarto-table-cell-role="th">BODY</th>
 <th data-quarto-table-cell-role="th">POSTED</th>
 <th data-quarto-table-cell-role="th">DURATION</th>
 <th data-quarto-table-cell-role="th">SALARY</th>
@@ -1527,11 +1635,12 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th">0</th>
 <td>Enterprise Analysts</td>
 <td>Murphy USA</td>
+<td>31-May-2024 Enterprise Analyst (II-III) Mercha...</td>
 <td>2024-06-02</td>
 <td>6</td>
 <td>125900.0</td>
-<td>97875.0</td>
-<td>150000.0</td>
+<td>96000.0</td>
+<td>156800.0</td>
 <td>Arkansas</td>
 <td>El Dorado, AR</td>
 <td>Not Specified</td>
@@ -1549,11 +1658,12 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th">1</th>
 <td>Oracle Consultants</td>
 <td>Smx Corporation Limited</td>
+<td>Oracle Consultant - Reports (3592) at SMX in A...</td>
 <td>2024-06-02</td>
 <td>60</td>
 <td>125900.0</td>
-<td>97875.0</td>
-<td>150000.0</td>
+<td>96000.0</td>
+<td>156800.0</td>
 <td>Maine</td>
 <td>Augusta, ME</td>
 <td>Remote</td>
@@ -1571,11 +1681,12 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th">2</th>
 <td>Data Analysts</td>
 <td>Sedgwick</td>
+<td>Taking care of people is at the heart of every...</td>
 <td>2024-06-02</td>
 <td>35</td>
-<td>95300.0</td>
-<td>75600.0</td>
-<td>107225.0</td>
+<td>96008.0</td>
+<td>76960.0</td>
+<td>109100.0</td>
 <td>Texas</td>
 <td>Dallas, TX</td>
 <td>Not Specified</td>
@@ -1593,11 +1704,12 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th">3</th>
 <td>Management Analysts</td>
 <td>Wells Fargo</td>
+<td>About this role: Wells Fargo is looking for a ...</td>
 <td>2024-06-02</td>
 <td>48</td>
-<td>95300.0</td>
-<td>75600.0</td>
-<td>107225.0</td>
+<td>96008.0</td>
+<td>76960.0</td>
+<td>109100.0</td>
 <td>Arizona</td>
 <td>Phoenix, AZ</td>
 <td>Not Specified</td>
@@ -1615,6 +1727,7 @@ dtype: int64</code></pre>
 <th data-quarto-table-cell-role="th">5</th>
 <td>Lead Data Analysts</td>
 <td>Lumen Technologies</td>
+<td>About Lumen Lumen connects the world. We are i...</td>
 <td>2024-06-02</td>
 <td>10</td>
 <td>110155.0</td>
