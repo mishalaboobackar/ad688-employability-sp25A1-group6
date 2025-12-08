@@ -8,7 +8,7 @@ format:
     toc: true
     number-sections: true
 ---
-
+![](./figures/website_image.png){width-"75%" fig-align="center"}
 ## Introduction
 
 The demand for data science, business analytics, and machine learning professionals has grown exponentially over the past decade. As organizations increasingly rely on data-driven decision making, understanding the current job market landscape is essential for career planning.
