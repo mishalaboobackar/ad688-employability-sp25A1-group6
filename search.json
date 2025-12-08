@@ -137,28 +137,21 @@
     "href": "index.html",
     "title": "Business Analytics, Data Science, and Machine Learning Trends",
     "section": "",
-    "text": "The demand for data science, business analytics, and machine learning professionals has grown exponentially over the past decade. As organizations increasingly rely on data-driven decision making, understanding the current job market landscape is essential for career planning.\nThis project analyzes the 2024 job market using Lightcast data to answer key questions:\n\nWhat skills are most in-demand for Data Science, Business Analytics, and ML roles?\nWhich industries are hiring the most data professionals?\nHow do salaries vary by location, experience, and skill requirements?\nWhat is the career outlook for business analytics professionals?"
-  },
-  {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Business Analytics, Data Science, and Machine Learning Trends",
-    "section": "",
-    "text": "The demand for data science, business analytics, and machine learning professionals has grown exponentially over the past decade. As organizations increasingly rely on data-driven decision making, understanding the current job market landscape is essential for career planning.\nThis project analyzes the 2024 job market using Lightcast data to answer key questions:\n\nWhat skills are most in-demand for Data Science, Business Analytics, and ML roles?\nWhich industries are hiring the most data professionals?\nHow do salaries vary by location, experience, and skill requirements?\nWhat is the career outlook for business analytics professionals?"
+    "text": "{width-“75%” fig-align=“center”} ## Introduction\nThe demand for data science, business analytics, and machine learning professionals has grown exponentially over the past decade. As organizations increasingly rely on data-driven decision making, understanding the current job market landscape is essential for career planning.\nThis project analyzes the 2024 job market using Lightcast data to answer key questions:"
   },
   {
     "objectID": "index.html#research-rationale",
     "href": "index.html#research-rationale",
     "title": "Business Analytics, Data Science, and Machine Learning Trends",
-    "section": "2 Research Rationale",
-    "text": "2 Research Rationale\nThe rise of artificial intelligence and automation has transformed the labor market. Data science and machine learning roles have emerged as some of the most sought-after positions across industries. Understanding which skills employers value, which regions offer the best opportunities, and how compensation varies can help job seekers make informed career decisions.\nThis analysis takes the perspective of a job seeker entering the data science field in 2024, examining real job posting data to identify trends and opportunities."
+    "section": "1 Research Rationale",
+    "text": "1 Research Rationale\nThe rise of artificial intelligence and automation has transformed the labor market. Data science and machine learning roles have emerged as some of the most sought-after positions across industries. Understanding which skills employers value, which regions offer the best opportunities, and how compensation varies can help job seekers make informed career decisions.\nThis analysis takes the perspective of a job seeker entering the data science field in 2024, examining real job posting data to identify trends and opportunities."
   },
   {
     "objectID": "index.html#literature-review",
     "href": "index.html#literature-review",
     "title": "Business Analytics, Data Science, and Machine Learning Trends",
-    "section": "3 Literature Review",
-    "text": "3 Literature Review\nRecent research highlights the evolving nature of data science careers. According to industry reports, Python, SQL, and machine learning frameworks remain the most requested technical skills in job postings. The demand for cloud computing expertise (AWS, Azure, GCP) has also increased significantly.\nStudies show that salary disparities exist across geographic regions, with tech hubs like San Francisco, Seattle, and New York offering higher compensation. However, the rise of remote work has begun to equalize opportunities for candidates outside traditional tech centers.\nBusiness analytics roles increasingly require a blend of technical skills and domain expertise, with employers seeking candidates who can translate data insights into actionable business recommendations."
+    "section": "2 Literature Review",
+    "text": "2 Literature Review\nRecent research highlights the evolving nature of data science careers. According to industry reports, Python, SQL, and machine learning frameworks remain the most requested technical skills in job postings. The demand for cloud computing expertise (AWS, Azure, GCP) has also increased significantly.\nStudies show that salary disparities exist across geographic regions, with tech hubs like San Francisco, Seattle, and New York offering higher compensation. However, the rise of remote work has begun to equalize opportunities for candidates outside traditional tech centers.\nBusiness analytics roles increasingly require a blend of technical skills and domain expertise, with employers seeking candidates who can translate data insights into actionable business recommendations."
   },
   {
     "objectID": "skill_gap_analysis.html",
