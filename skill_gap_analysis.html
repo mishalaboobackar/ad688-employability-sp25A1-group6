@@ -189,103 +189,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div id="25c5a797" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> pio</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pio.renderers.default <span class="op">=</span> <span class="st">"plotly_mimetype+notebook"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 <section id="personal-skills-assessment-mishal-almas" class="level2">
 <h2 class="anchored" data-anchor-id="personal-skills-assessment-mishal-almas">Personal Skills Assessment: Mishal &amp; Almas</h2>
 <p><strong>Program:</strong> Applied Business Analytics, Boston University</p>
 <p>This analysis compares our current skill levels against the market demand identified in our Exploratory Data Analysi of job postings from the lightcast dataset. The goal is to identify skill gaps and prioritize learning areas for career readiness.</p>
-<div id="b8eb859f" class="cell" data-execution_count="13">
+<div id="b8eb859f" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>market_demand <span class="op">=</span> {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">76</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">52</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">32</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">31</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">43</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">28</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">25</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">22</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">18</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">15</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">20</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">35</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>mishal_skills <span class="op">=</span> {</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">55</span>,</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">30</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">70</span>,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">70</span>,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">70</span>,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">55</span>,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">50</span>,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">75</span>,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">40</span>,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">25</span>,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">60</span>,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">60</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>almas_skills <span class="op">=</span> {</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">70</span>,</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">50</span>,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">60</span>,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">0</span>,</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">60</span>,</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">80</span>,</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">60</span>,</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">70</span>,</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">50</span>,</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">55</span>,</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">20</span>,</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">60</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>skills_df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Skill'</span>: <span class="bu">list</span>(market_demand.keys()),</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Market_Demand'</span>: <span class="bu">list</span>(market_demand.values()),</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mishal'</span>: [mishal_skills[s] <span class="cf">for</span> s <span class="kw">in</span> market_demand.keys()],</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Almas'</span>: [almas_skills[s] <span class="cf">for</span> s <span class="kw">in</span> market_demand.keys()]</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>skills_df[<span class="st">'Mishal_Gap'</span>] <span class="op">=</span> skills_df[<span class="st">'Mishal'</span>] <span class="op">-</span> skills_df[<span class="st">'Market_Demand'</span>]</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>skills_df[<span class="st">'Almas_Gap'</span>] <span class="op">=</span> skills_df[<span class="st">'Almas'</span>] <span class="op">-</span> skills_df[<span class="st">'Market_Demand'</span>]</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📊 Skill Gap Analysis Summary"</span>)</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">50</span>)</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(skills_df.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>market_demand <span class="op">=</span> {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">76</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">52</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">32</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">31</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">43</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">28</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">25</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">22</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">18</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">15</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">20</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">35</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>mishal_skills <span class="op">=</span> {</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">55</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">30</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">70</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">70</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">70</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">55</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">50</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">75</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">30</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">25</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">30</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">60</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>almas_skills <span class="op">=</span> {</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data Analysis'</span>: <span class="dv">70</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">'SQL'</span>: <span class="dv">50</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Python'</span>: <span class="dv">60</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tableau'</span>: <span class="dv">0</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Communication'</span>: <span class="dv">60</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Excel'</span>: <span class="dv">80</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Statistics'</span>: <span class="dv">60</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Power BI'</span>: <span class="dv">70</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Machine Learning'</span>: <span class="dv">50</span>,</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: <span class="dv">55</span>,</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Project Management'</span>: <span class="dv">20</span>,</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Business Intelligence'</span>: <span class="dv">60</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>skills_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Skill'</span>: <span class="bu">list</span>(market_demand.keys()),</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Market_Demand'</span>: <span class="bu">list</span>(market_demand.values()),</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mishal'</span>: [mishal_skills[s] <span class="cf">for</span> s <span class="kw">in</span> market_demand.keys()],</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Almas'</span>: [almas_skills[s] <span class="cf">for</span> s <span class="kw">in</span> market_demand.keys()]</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>skills_df[<span class="st">'Mishal_Gap'</span>] <span class="op">=</span> skills_df[<span class="st">'Mishal'</span>] <span class="op">-</span> skills_df[<span class="st">'Market_Demand'</span>]</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>skills_df[<span class="st">'Almas_Gap'</span>] <span class="op">=</span> skills_df[<span class="st">'Almas'</span>] <span class="op">-</span> skills_df[<span class="st">'Market_Demand'</span>]</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>📊 Skill Gap Analysis Summary
---------------------------------------------------
-                Skill  Market_Demand  Mishal  Almas  Mishal_Gap  Almas_Gap
-        Data Analysis             76      55     70         -21         -6
-                  SQL             52      30     50         -22         -2
-               Python             32      70     60          38         28
-              Tableau             31      70      0          39        -31
-        Communication             43      70     60          27         17
-                Excel             28      55     80          27         52
-           Statistics             25      50     60          25         35
-             Power BI             22      75     70          53         48
-     Machine Learning             18      40     50          22         32
-                    R             15      25     55          10         40
-   Project Management             20      60     20          40          0
-Business Intelligence             35      60     60          25         25</code></pre>
-</div>
 </div>
 </section>
 <section id="visualization-1-skill-comparison-radar-chart" class="level2">
 <h2 class="anchored" data-anchor-id="visualization-1-skill-comparison-radar-chart">Visualization 1: Skill Comparison Radar Chart</h2>
 <p>This radar chart compares our individual skill levels against market demand, helping visualize strengths and areas for improvement.</p>
-<div id="22d2a430" class="cell" data-execution_count="14">
+<div id="22d2a430" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -391,9 +378,9 @@ Business Intelligence             35      60     60          25         25</code
                 Excel             28      55     80          27         52
            Statistics             25      50     60          25         35
              Power BI             22      75     70          53         48
-     Machine Learning             18      40     50          22         32
+     Machine Learning             18      30     50          12         32
                     R             15      25     55          10         40
-   Project Management             20      60     20          40          0
+   Project Management             20      30     20          10          0
 Business Intelligence             35      60     60          25         25</code></pre>
 </div>
 </div>
@@ -401,7 +388,7 @@ Business Intelligence             35      60     60          25         25</code
 <section id="visualization-2-skill-gap-heatmap-table" class="level2">
 <h2 class="anchored" data-anchor-id="visualization-2-skill-gap-heatmap-table">Visualization 2: Skill Gap Heatmap Table</h2>
 <p>This heatmap provides a detailed breakdown of each skill, showing market demand alongside our proficiency levels and highlighting specific gaps to address.</p>
-<div id="e3042cff" class="cell" data-execution_count="16">
+<div id="e3042cff" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -435,115 +422,67 @@ Business Intelligence             35      60     60          25         25</code
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>mishal_colors <span class="op">=</span> [get_cell_color(s) <span class="cf">for</span> s <span class="kw">in</span> skills_sorted[<span class="st">'Mishal_Status'</span>]]</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>almas_colors <span class="op">=</span> [get_cell_color(s) <span class="cf">for</span> s <span class="kw">in</span> skills_sorted[<span class="st">'Almas_Status'</span>]]</span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Create cell fill colors (column-wise)</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>cell_colors <span class="op">=</span> [</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(248, 249, 250, 0.8)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),  <span class="co"># Skill</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(99, 110, 250, 0.15)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),   <span class="co"># Market Demand</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(239, 85, 59, 0.1)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),     <span class="co"># Mishal Level</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    mishal_colors,                                         <span class="co"># Mishal Status</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(0, 204, 150, 0.1)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),     <span class="co"># Almas Level</span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    almas_colors                                           <span class="co"># Almas Status</span></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>fig2.add_trace(go.Table(</span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    header<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>        values<span class="op">=</span>headers,</span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>        fill_color<span class="op">=</span><span class="st">'#2c3e50'</span>,</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'white'</span>, size<span class="op">=</span><span class="dv">13</span>, family<span class="op">=</span><span class="st">'Arial'</span>),</span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>        align<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">45</span>,</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>        line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'white'</span>, width<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>    cells<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>        values<span class="op">=</span>[</span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Skill'</span>],</span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Market_Demand'</span>]],</span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Mishal'</span>]],</span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Mishal_Status'</span>],</span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Almas'</span>]],</span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Almas_Status'</span>]</span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>        ],</span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>        fill_color<span class="op">=</span>cell_colors,</span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'#2c3e50'</span>, size<span class="op">=</span><span class="dv">12</span>, family<span class="op">=</span><span class="st">'Arial'</span>),</span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>        align<span class="op">=</span>[<span class="st">'left'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>],</span>
-<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">35</span>,</span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>        line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'rgba(0,0,0,0.1)'</span>, width<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>fig2.update_layout(</span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">'&lt;b&gt;Skill Gap Analysis Dashboard&lt;/b&gt;&lt;br&gt;&lt;sup&gt;🎯 Focus Area | ⚡ On Track | ✅ Strong&lt;/sup&gt;'</span>,</span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">18</span>, color<span class="op">=</span><span class="st">'#2c3e50'</span>, family<span class="op">=</span><span class="st">'Arial Black'</span>),</span>
-<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="fl">0.5</span>,</span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="fl">0.98</span></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">550</span>,</span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">900</span>,</span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">=</span><span class="bu">dict</span>(t<span class="op">=</span><span class="dv">80</span>, b<span class="op">=</span><span class="dv">20</span>, l<span class="op">=</span><span class="dv">20</span>, r<span class="op">=</span><span class="dv">20</span>),</span>
-<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>    paper_bgcolor<span class="op">=</span><span class="st">'white'</span></span>
-<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>fig2.write_image(<span class="st">'figures/skill_gap_table.png'</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>fig2.show()</span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"="</span> <span class="op">*</span> <span class="dv">70</span>)</span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"📋 SKILL GAP ANALYSIS INSIGHTS"</span>)</span>
-<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">70</span>)</span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">👩‍💻 MISHAL'S PROFILE:"</span>)</span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">40</span>)</span>
-<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>strong <span class="op">=</span> skills_sorted[skills_sorted[<span class="st">'Mishal_Status'</span>].<span class="bu">str</span>.contains(<span class="st">'Strong'</span>)][<span class="st">'Skill'</span>].tolist()</span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>focus <span class="op">=</span> skills_sorted[skills_sorted[<span class="st">'Mishal_Status'</span>].<span class="bu">str</span>.contains(<span class="st">'Focus'</span>)][<span class="st">'Skill'</span>].tolist()</span>
-<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Strengths: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(strong) <span class="cf">if</span> strong <span class="cf">else</span> <span class="st">'Building towards excellence'</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  🎯 Focus Areas: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(focus) <span class="cf">if</span> focus <span class="cf">else</span> <span class="st">'Well-rounded profile!'</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">👨‍💻 ALMAS'S PROFILE:"</span>)</span>
-<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">40</span>)</span>
-<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>strong <span class="op">=</span> skills_sorted[skills_sorted[<span class="st">'Almas_Status'</span>].<span class="bu">str</span>.contains(<span class="st">'Strong'</span>)][<span class="st">'Skill'</span>].tolist()</span>
-<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>focus <span class="op">=</span> skills_sorted[skills_sorted[<span class="st">'Almas_Status'</span>].<span class="bu">str</span>.contains(<span class="st">'Focus'</span>)][<span class="st">'Skill'</span>].tolist()</span>
-<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  ✅ Strengths: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(strong) <span class="cf">if</span> strong <span class="cf">else</span> <span class="st">'Building towards excellence'</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  🎯 Focus Areas: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(focus) <span class="cf">if</span> focus <span class="cf">else</span> <span class="st">'Well-rounded profile!'</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">💡 KEY RECOMMENDATIONS:"</span>)</span>
-<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">40</span>)</span>
-<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  1. SQL is critical - both need improvement (Mishal: 30%, Almas: 50%)"</span>)</span>
-<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  2. Almas should prioritize Tableau (currently 0%, market demand 31%)"</span>)</span>
-<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  3. Mishal should strengthen Data Analysis fundamentals (55% vs 76%)"</span>)</span>
-<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  4. Leverage complementary strengths: Mishal's Python + Almas's Excel/R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>cell_colors <span class="op">=</span> [</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(248, 249, 250, 0.8)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),  </span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(99, 110, 250, 0.15)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),   </span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(239, 85, 59, 0.1)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),     </span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    mishal_colors,                                         </span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'rgba(0, 204, 150, 0.1)'</span>] <span class="op">*</span> <span class="bu">len</span>(skills_sorted),     </span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    almas_colors                                           </span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>fig2.add_trace(go.Table(</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    header<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>        values<span class="op">=</span>headers,</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>        fill_color<span class="op">=</span><span class="st">'#2c3e50'</span>,</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'white'</span>, size<span class="op">=</span><span class="dv">13</span>, family<span class="op">=</span><span class="st">'Arial'</span>),</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>        align<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">45</span>,</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>        line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'white'</span>, width<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    cells<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>        values<span class="op">=</span>[</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Skill'</span>],</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Market_Demand'</span>]],</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Mishal'</span>]],</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Mishal_Status'</span>],</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>            [<span class="ss">f"</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">%"</span> <span class="cf">for</span> v <span class="kw">in</span> skills_sorted[<span class="st">'Almas'</span>]],</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>            skills_sorted[<span class="st">'Almas_Status'</span>]</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>        fill_color<span class="op">=</span>cell_colors,</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'#2c3e50'</span>, size<span class="op">=</span><span class="dv">12</span>, family<span class="op">=</span><span class="st">'Arial'</span>),</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>        align<span class="op">=</span>[<span class="st">'left'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>, <span class="st">'center'</span>],</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">35</span>,</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>        line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'rgba(0,0,0,0.1)'</span>, width<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>fig2.update_layout(</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">'&lt;b&gt;Skill Gap Analysis Dashboard&lt;/b&gt;&lt;br&gt;&lt;sup&gt;🎯 Focus Area | ⚡ On Track | ✅ Strong&lt;/sup&gt;'</span>,</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">18</span>, color<span class="op">=</span><span class="st">'#2c3e50'</span>, family<span class="op">=</span><span class="st">'Arial Black'</span>),</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="fl">0.98</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">550</span>,</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">900</span>,</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">=</span><span class="bu">dict</span>(t<span class="op">=</span><span class="dv">80</span>, b<span class="op">=</span><span class="dv">20</span>, l<span class="op">=</span><span class="dv">20</span>, r<span class="op">=</span><span class="dv">20</span>),</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>    paper_bgcolor<span class="op">=</span><span class="st">'white'</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>fig2.write_image(<span class="st">'figures/skill_gap_table.png'</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>fig2.show()</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-======================================================================
-📋 SKILL GAP ANALYSIS INSIGHTS
-======================================================================
-
-👩‍💻 MISHAL'S PROFILE:
-----------------------------------------
-   Strengths: Communication, Business Intelligence, Python, Tableau, Excel, Statistics, Power BI, Project Management, Machine Learning, R
-  🎯 Focus Areas: Data Analysis, SQL
-
-👨‍💻 ALMAS'S PROFILE:
-----------------------------------------
-  ✅ Strengths: Communication, Business Intelligence, Python, Excel, Statistics, Power BI, Machine Learning, R
-  🎯 Focus Areas: Tableau
-
-💡 KEY RECOMMENDATIONS:
-----------------------------------------
-  1. SQL is critical - both need improvement (Mishal: 30%, Almas: 50%)
-  2. Almas should prioritize Tableau (currently 0%, market demand 31%)
-  3. Mishal should strengthen Data Analysis fundamentals (55% vs 76%)
-  4. Leverage complementary strengths: Mishal's Python + Almas's Excel/R</code></pre>
 </div>
 </div>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Based on our analysis of 47,000+ job postings and our personal skill assessments:</p>
-<p><strong>Mishal’s Profile:</strong> - <strong>Strengths:</strong> Power BI (75%), Python (70%), Tableau (70%), Communication (70%) — exceeds market demand in visualization and programming - <strong>Focus Areas:</strong> Data Analysis (55% vs 76% demand), SQL (30% vs 52% demand), R (25% vs 15% demand) - Strong visualization toolkit but needs to strengthen core data analysis and database querying skills</p>
+<p>Based on our analysis of 20,000+ job postings and our personal skill assessments:</p>
+<p><strong>Mishal’s Profile:</strong> - <strong>Strengths:</strong> Power BI (75%), Python (70%), Tableau (70%), Communication (70%) - exceeds market demand in visualization and programming - <strong>Focus Areas:</strong> Data Analysis (55% vs 76% demand), SQL (30% vs 52% demand) - Strong visualization toolkit but needs to strengthen core data analysis and database querying skills</p>
 <p><strong>Almas’s Profile:</strong><br>
 - <strong>Strengths:</strong> Excel (80%), Data Analysis (70%), Power BI (70%) — solid foundation in spreadsheet and BI tools - <strong>Focus Areas:</strong> Tableau (0% - not yet learned), Project Management (20% vs 20% demand), SQL (50% vs 52% demand) - Excellent Excel skills; should prioritize learning Tableau to complete the visualization skillset</p>
 <p><strong>Team Synergy:</strong> - <strong>Mishal</strong> brings stronger Python programming and visualization expertise - <strong>Almas</strong> brings superior Excel, R, and Data Analysis capabilities - Together, we try to help each other out in bringing good results for the project.</p>
